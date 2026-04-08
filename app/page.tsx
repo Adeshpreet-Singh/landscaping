@@ -24,6 +24,7 @@ const TESTIMONIALS = [
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -66,7 +67,19 @@ export default function Home() {
         </nav>
       </header>
 
-      <main id="main" role="main">
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{__html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Landscaping",
+            "url": "https://landscaping.com",
+            "description": "Professional landscaping services.",
+          })}}
+        />
+
+        <main id="main" role="main">
         <section className="pt-28 pb-20 md:pb-32 overflow-hidden">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -171,7 +184,7 @@ export default function Home() {
               <p className="text-warm-gray text-lg max-w-xl mx-auto">Free site visit and estimate. No obligation, just possibilities.</p>
             </div>
             <div className="warm-card rounded-3xl p-8 md:p-10 max-w-2xl mx-auto">
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 3000); }}>
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-earth mb-2">Full Name</label>
@@ -185,7 +198,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-earth mb-2">Phone</label>
-                    <input id="phone" type="tel" placeholder="(555) 000-0000" className="w-full border border-sand rounded-xl px-4 py-3 text-earth bg-cream placeholder:text-warm-gray/50 focus:border-sage focus:ring-2 focus:ring-sage/20 focus:outline-none" />
+                    <input id="phone" type="tel" placeholder="<a href="tel:(555) 000-0000" className="hover:underline">(555) 000-0000</a>" className="w-full border border-sand rounded-xl px-4 py-3 text-earth bg-cream placeholder:text-warm-gray/50 focus:border-sage focus:ring-2 focus:ring-sage/20 focus:outline-none" />
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-earth mb-2">Service Needed</label>
@@ -204,8 +217,35 @@ export default function Home() {
                   <textarea id="message" rows={4} placeholder="Describe your outdoor space and vision..." className="w-full border border-sand rounded-xl px-4 py-3 text-earth bg-cream placeholder:text-warm-gray/50 focus:border-sage focus:ring-2 focus:ring-sage/20 focus:outline-none resize-none" />
                 </div>
                 <button type="submit" className="w-full bg-sage text-white py-4 rounded-full text-lg font-medium hover:bg-sage-light transition-all">Request Free Estimate</button>
+              {submitted && <p className="text-center text-green-500 text-sm mt-2 animate-pulse">Sent! We will be in touch soon.</p>}
                 <p className="text-center text-warm-gray text-xs">Free site visit within 48 hours. No obligation.</p>
               </form>
+            </div>
+          </div>
+        </section>
+      
+        {/* FAQ Section */}
+        <section className="py-24" aria-labelledby="faq-heading">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-current/60">Everything you need to know.</p>
+            </div>
+            <div className="space-y-4">
+              {{[
+          {question: 'How do I schedule an appointment?', answer: 'Call us, text us, or fill out the contact form. We typically respond within 1 hour during business hours.'},
+          {question: 'Are you licensed and insured?', answer: 'Yes. We are fully licensed, bonded, and carry comprehensive liability insurance.'},
+          {question: 'Do you offer free estimates?', answer: 'Yes. We provide free, no-obligation estimates for all services. Call or fill out our form to get started.'},
+          {question: 'What areas do you serve?', answer: 'We serve the entire metro area. Contact us to confirm service availability in your specific location.'}
+              ].map((faq, i) => (
+                <details key={i} className="group border border-current/10 rounded-xl p-5 [&_summary]:cursor-pointer">
+                  <summary className="font-medium flex justify-between items-center list-none">
+                    {faq.question}
+                    <span className="ml-4 text-current/40 group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-3 text-current/60 text-sm leading-relaxed">{faq.answer}</p>
+                </details>
+              ))}}
             </div>
           </div>
         </section>
@@ -227,7 +267,13 @@ export default function Home() {
           <div className="mt-8 pt-8 border-t border-earth-light text-center text-sm text-warm-gray">
             © 2026 Verdant Landscapes. Growing beauty since 2005.
           </div>
-        </div>
+        
+            <div className="flex gap-4 text-sm">
+              <a href="#" className="hover:underline">Twitter</a>
+              <a href="#" className="hover:underline">LinkedIn</a>
+              <a href="#" className="hover:underline">Instagram</a>
+            </div>
+          </div>
       </footer>
     </div>
   );
