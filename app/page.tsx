@@ -76,18 +76,9 @@ living, perfected.
               </div>
             </div>
             <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400">500+</div>
-              <div className="text-sm text-green-300 mt-1">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400">12</div>
-              <div className="text-sm text-green-300 mt-1">Years</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400">Licensed</div>
-              <div className="text-sm text-green-300 mt-1">Irrigators</div>
-            </div>
+            <div className="text-center"><div className="text-3xl md:text-4xl font-bold text-green-400">500+</div><div className="text-sm text-green-300 mt-1">Projects</div></div>
+            <div className="text-center"><div className="text-3xl md:text-4xl font-bold text-green-400">12</div><div className="text-sm text-green-300 mt-1">Years</div></div>
+            <div className="text-center"><div className="text-3xl md:text-4xl font-bold text-green-400">Licensed</div><div className="text-sm text-green-300 mt-1">Irrigators</div></div>
             </div>
           </div>
         </section>
@@ -99,36 +90,30 @@ living, perfected.
               <h2 id="services-heading" className="text-4xl md:text-5xl font-bold">Our Services</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">🌿</div>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">🌿</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Landscape Design</h3>
-              <p className="text-green-300 leading-relaxed">Custom plans and 3D renders.</p>
-            </article>
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">🪨</div>
+              <p className="text-green-300 leading-relaxed">Custom plans and 3D renders.</p></article>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">🪨</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Hardscaping</h3>
-              <p className="text-green-300 leading-relaxed">Patios, walkways, retaining walls.</p>
-            </article>
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">🌳</div>
+              <p className="text-green-300 leading-relaxed">Patios, walkways, retaining walls.</p></article>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">🌳</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Planting</h3>
-              <p className="text-green-300 leading-relaxed">Trees, shrubs, perennials.</p>
-            </article>
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">💧</div>
+              <p className="text-green-300 leading-relaxed">Trees, shrubs, perennials.</p></article>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">💧</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Irrigation</h3>
-              <p className="text-green-300 leading-relaxed">Smart sprinkler systems.</p>
-            </article>
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">🏡</div>
+              <p className="text-green-300 leading-relaxed">Smart sprinkler systems.</p></article>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">🏡</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Outdoor Living</h3>
-              <p className="text-green-300 leading-relaxed">Fire pits, kitchens, pergolas.</p>
-            </article>
-            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4" aria-hidden="true">🚜</div>
+              <p className="text-green-300 leading-relaxed">Fire pits, kitchens, pergolas.</p></article>
+            <article className="bg-green-900 border border-green-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-4">🚜</div>
               <h3 className="text-xl font-bold mb-3 text-green-50">Maintenance</h3>
-              <p className="text-green-300 leading-relaxed">Weekly mowing and seasonal cleanup.</p>
-            </article>
+              <p className="text-green-300 leading-relaxed">Weekly mowing and seasonal cleanup.</p></article>
             </div>
           </div>
         </section>
@@ -142,28 +127,16 @@ living, perfected.
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-green-900 border border-green-800 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center text-2xl font-bold text-green-400">TE</div>
-              <h3 className="font-bold text-green-50">Tom Erikson</h3>
-              <p className="text-sm text-green-400">Lead Designer</p>
-              <p className="text-sm text-green-300 mt-1">CLD certified</p>
-            </div>
+              <h3 className="font-bold text-green-50">Tom Erikson</h3><p className="text-sm text-green-400">Lead Designer</p><p className="text-sm text-green-300 mt-1">CLD certified</p></div>
             <div className="bg-green-900 border border-green-800 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center text-2xl font-bold text-green-400">SK</div>
-              <h3 className="font-bold text-green-50">Sarah Kim</h3>
-              <p className="text-sm text-green-400">Horticulturist</p>
-              <p className="text-sm text-green-300 mt-1">CSU grad</p>
-            </div>
+              <h3 className="font-bold text-green-50">Sarah Kim</h3><p className="text-sm text-green-400">Horticulturist</p><p className="text-sm text-green-300 mt-1">CSU grad</p></div>
             <div className="bg-green-900 border border-green-800 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center text-2xl font-bold text-green-400">CR</div>
-              <h3 className="font-bold text-green-50">Carlos Rivera</h3>
-              <p className="text-sm text-green-400">Hardscape Crew</p>
-              <p className="text-sm text-green-300 mt-1">ICPI certified</p>
-            </div>
+              <h3 className="font-bold text-green-50">Carlos Rivera</h3><p className="text-sm text-green-400">Hardscape Crew</p><p className="text-sm text-green-300 mt-1">ICPI certified</p></div>
             <div className="bg-green-900 border border-green-800 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center text-2xl font-bold text-green-400">EP</div>
-              <h3 className="font-bold text-green-50">Emily Park</h3>
-              <p className="text-sm text-green-400">Maintenance Mgr</p>
-              <p className="text-sm text-green-300 mt-1">Landscape pro</p>
-            </div>
+              <h3 className="font-bold text-green-50">Emily Park</h3><p className="text-sm text-green-400">Maintenance Mgr</p><p className="text-sm text-green-300 mt-1">Landscape pro</p></div>
             </div>
           </div>
         </section>
@@ -176,26 +149,14 @@ living, perfected.
             </div>
             <div className="space-y-4">
             <details className="group border border-current/10 rounded-xl p-5 cursor-pointer">
-              <summary className="font-medium flex justify-between items-center list-none text-green-50">
-                Free estimate?
-                <span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span>
-              </summary>
-              <p className="mt-3 text-green-300 text-sm leading-relaxed">Yes, on-site estimates always free.</p>
-            </details>
+              <summary className="font-medium flex justify-between items-center list-none text-green-50">Free estimate?<span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+              <p className="mt-3 text-green-300 text-sm leading-relaxed">Yes, on-site estimates always free.</p></details>
             <details className="group border border-current/10 rounded-xl p-5 cursor-pointer">
-              <summary className="font-medium flex justify-between items-center list-none text-green-50">
-                Design fee?
-                <span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span>
-              </summary>
-              <p className="mt-3 text-green-300 text-sm leading-relaxed">$500 design fee, credited toward installation.</p>
-            </details>
+              <summary className="font-medium flex justify-between items-center list-none text-green-50">Design fee?<span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+              <p className="mt-3 text-green-300 text-sm leading-relaxed">$500 design fee, credited toward installation.</p></details>
             <details className="group border border-current/10 rounded-xl p-5 cursor-pointer">
-              <summary className="font-medium flex justify-between items-center list-none text-green-50">
-                Maintenance?
-                <span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span>
-              </summary>
-              <p className="mt-3 text-green-300 text-sm leading-relaxed">Weekly, bi-weekly, and seasonal plans available.</p>
-            </details>
+              <summary className="font-medium flex justify-between items-center list-none text-green-50">Maintenance?<span className="ml-4 text-green-300 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+              <p className="mt-3 text-green-300 text-sm leading-relaxed">Weekly, bi-weekly, and seasonal plans available.</p></details>
             </div>
           </div>
         </section>
@@ -207,18 +168,9 @@ living, perfected.
                 <p className="text-green-400 text-sm tracking-widest uppercase mb-3">Get In Touch</p>
                 <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold mb-6">Free Estimate</h2>
                 <div className="space-y-6 text-green-300">
-                  <div>
-                    <div className="font-bold text-green-50">Phone</div>
-                    <a href="tel:(555) 345-6781" className="hover:text-green-400 transition-colors">(555) 345-6781</a>
-                  </div>
-                  <div>
-                    <div className="font-bold text-green-50">Address</div>
-                    <p className="whitespace-pre-line">Serving Metro Denver, CO</p>
-                  </div>
-                  <div>
-                    <div className="font-bold text-green-50">Hours</div>
-                    <p>Mon–Sat 7 AM – 6 PM</p>
-                  </div>
+                  <div><div className="font-bold text-green-50">Phone</div><a href="tel:(555) 345-6781" className="hover:text-green-400">(555) 345-6781</a></div>
+                  <div><div className="font-bold text-green-50">Address</div><p>Serving Metro Denver, CO</p></div>
+                  <div><div className="font-bold text-green-50">Hours</div><p>Mon–Sat 7 AM – 6 PM</p></div>
                 </div>
               </div>
               <div>
