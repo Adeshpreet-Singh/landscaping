@@ -36,7 +36,7 @@ export default function Home() {
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Landscape" className="w-full h-96 object-cover rounded-2xl" loading="lazy" />
           </div>
         </section>
-        <section id="services" className="py-24 px-8" style={{ background: 'white' }}>
+        <section id="services" className="reveal py-24 px-8" style={{ background: 'white' }}>
           <div className="max-w-5xl mx-auto">
             <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>What We Do</p>
             <h2 className="heading-land text-4xl mb-12">Services</h2>
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="work" className="py-24 px-8">
+        <section id="work" className="reveal py-24 px-8">
           <div className="max-w-5xl mx-auto">
             <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Portfolio</p>
             <h2 className="heading-land text-4xl mb-12">Our Work</h2>
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
+        <section id="contact" className="reveal py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
               <p className="text-xs tracking-[0.3em] uppercase mb-3 opacity-70">Start</p>
