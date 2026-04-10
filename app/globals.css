@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
+:root { --green: #2d5a3d; --sage: #87a96b; --cream: #f8f6f0; --earth: #5c4033; }
 html { scroll-behavior: smooth; }
-body { background: #052e16; color: #ecfdf5; font-family: system-ui, sans-serif; }
-:focus-visible { outline: 2px solid #22c55e; outline-offset: 2px; }
+body { background: var(--cream); color: #1a1a1a; font-family: 'Inter', sans-serif; }
+.heading-land { font-family: 'DM Serif Display', serif; line-height: 1.15; }
+.project-card { overflow: hidden; border-radius: 1rem; position: relative; }
+.project-card img { transition: transform 0.6s; width: 100%; height: 100%; object-fit: cover; }
+.project-card:hover img { transform: scale(1.05); }
+input, textarea, select { background: white !important; border: 1px solid #d4c9b8 !important; padding: 0.75rem 1rem; border-radius: 0.5rem; }
+input:focus, textarea:focus, select:focus { border-color: var(--green) !important; outline: none; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; } }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
