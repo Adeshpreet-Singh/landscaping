@@ -263,7 +263,7 @@ export default function Home() {
                     className="w-full text-left px-6 py-5 flex justify-between items-center gap-4"
                   >
                     <span className="font-semibold text-sm">{faq.q}</span>
-                    <span className="text-lg opacity-40 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
+                    <span className="text-lg opacity-70 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
                   </button>
                   {openFaq === i && (
                     <div className="px-6 pb-5">
