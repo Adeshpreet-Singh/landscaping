@@ -73,7 +73,7 @@ export default function Home() {
 
       <main>
         {/* Hero */}
-        <section className="hero py-28 px-8">
+        <section className="land-hero py-28 px-8">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--sage)' }}>Design · Install · Maintain</p>
@@ -96,7 +96,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section id="services" className="reveal section-alt py-24 px-8" style={{ background: 'white' }}>
+        <section id="services" className="land-reveal section-alt py-24 px-8" style={{ background: 'white' }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>What We Do</p>
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map(s => (
-                <div key={s.name} className="card p-6 rounded-lg hover:shadow-lg transition-shadow" style={{ border: '1px solid #e8e0d4' }}>
+                <div key={s.name} className="land-card p-6 rounded-lg hover:shadow-lg transition-shadow" style={{ border: '1px solid #e8e0d4' }}>
                   <p className="text-2xl mb-3">{s.icon}</p>
                   <h3 className="font-semibold mb-2">{s.name}</h3>
                   <p className="text-sm opacity-85 leading-relaxed">{s.desc}</p>
@@ -116,7 +116,7 @@ export default function Home() {
         </section>
 
         {/* Project Gallery */}
-        <section id="work" className="reveal py-24 px-8">
+        <section id="work" className="land-reveal py-24 px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Portfolio</p>
@@ -125,10 +125,10 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map(p => (
-                <div key={p.name} className="card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
+                <div key={p.name} className="land-card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
                   <div className="aspect-[4/3] relative img-hover">
                     <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover" />
-                    <div className="badge absolute top-3 right-3 px-3 py-1 text-xs rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>{p.type}</div>
+                    <div className="land-badge absolute top-3 right-3 px-3 py-1 text-xs rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>{p.type}</div>
                   </div>
                   <div className="p-5">
                     <h3 className="font-semibold text-lg mb-3">{p.name}</h3>
@@ -150,7 +150,7 @@ export default function Home() {
         </section>
 
         {/* Maintenance Plans */}
-        <section id="plans" className="reveal section-alt py-24 px-8" style={{ background: 'white' }}>
+        <section id="plans" className="land-reveal section-alt py-24 px-8" style={{ background: 'white' }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Year-Round Care</p>
@@ -159,8 +159,8 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {maintenancePlans.map(plan => (
-                <div key={plan.name} className="card rounded-xl p-8 relative" style={{ border: plan.popular ? '2px solid var(--green)' : '1px solid #e8e0d4', background: plan.popular ? '#f0fdf4' : 'white' }}>
-                  {plan.popular && <div className="badge absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Most Popular</div>}
+                <div key={plan.name} className="land-card rounded-xl p-8 relative" style={{ border: plan.popular ? '2px solid var(--green)' : '1px solid #e8e0d4', background: plan.popular ? '#f0fdf4' : 'white' }}>
+                  {plan.popular && <div className="land-badge absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Most Popular</div>}
                   <h3 className="heading-land text-2xl mb-2">{plan.name}</h3>
                   <div className="mb-3">
                     <span className="heading-land text-4xl" style={{ color: 'var(--green)' }}>{plan.price}</span>
@@ -185,7 +185,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="reveal py-24 px-8">
+        <section className="land-reveal py-24 px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>The Verdant Difference</p>
@@ -209,7 +209,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="reveal section-alt py-24 px-8" style={{ background: 'white' }}>
+        <section id="testimonials" className="land-reveal section-alt py-24 px-8" style={{ background: 'white' }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>What Clients Say</p>
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map(t => (
-                <div key={t.name} className="card rounded-xl p-8" style={{ border: '1px solid #e8e0d4' }}>
+                <div key={t.name} className="land-card rounded-xl p-8" style={{ border: '1px solid #e8e0d4' }}>
                   <div className="flex gap-1 mb-4">
                     {[1, 2, 3, 4, 5].map(s => <span key={s} style={{ color: '#f59e0b' }}>★</span>)}
                   </div>
@@ -233,7 +233,7 @@ export default function Home() {
         </section>
 
         {/* Service Areas */}
-        <section className="reveal py-24 px-8">
+        <section className="land-reveal py-24 px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Coverage</p>
@@ -242,14 +242,14 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map(area => (
-                <span key={area} className="badge px-4 py-2 rounded-full text-sm" style={{ background: '#e8e0d4' }}>{area}</span>
+                <span key={area} className="land-badge px-4 py-2 rounded-full text-sm" style={{ background: '#e8e0d4' }}>{area}</span>
               ))}
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="reveal section-alt py-24 px-8" style={{ background: 'white' }}>
+        <section id="faq" className="land-reveal section-alt py-24 px-8" style={{ background: 'white' }}>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Questions</p>
@@ -257,7 +257,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               {faqs.map((faq, i) => (
-                <div key={i} className="card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
+                <div key={i} className="land-card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
                   <button style={{ cursor: "pointer" }} className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-stone-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)} >
                     <span className="font-semibold text-sm">{faq.q}</span>
                     <span className="text-lg opacity-90 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
@@ -274,7 +274,7 @@ export default function Home() {
         </section>
 
         {/* Free Estimate Form */}
-        <section id="contact" className="reveal py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
+        <section id="contact" className="land-reveal py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
               <p className="text-sm tracking-[0.3em] uppercase mb-3 opacity-90">Start Your Project</p>
@@ -310,12 +310,12 @@ export default function Home() {
               ) : (
                 <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-4" style={{ color: '#1a1a1a' }}>
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                    <input type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input className="land-input" type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input className="land-input" type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   </div>
-                  <input type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input" type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input" type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input" type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <select className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }}>
                     <option value="">Select a Service</option>
                     {services.map(s => <option key={s.name}>{s.name}</option>)}
@@ -331,7 +331,7 @@ export default function Home() {
                     <option>$100,000+</option>
                     <option>Not Sure Yet</option>
                   </select>
-                  <textarea rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <textarea className="land-input" rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <button style={{ cursor: "pointer" }} type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
                   <p className="text-sm text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
                 </form>
