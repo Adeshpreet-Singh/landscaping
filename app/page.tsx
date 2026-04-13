@@ -61,14 +61,14 @@ export default function Home() {
       <nav className="sticky top-0 z-50 px-8 py-4 flex justify-between items-center" style={{ background: '#f8f6f0ee', backdropFilter: 'blur(12px)', borderBottom: '1px solid #d4c9b8' }}>
         <div>
           <h1 className="heading-land text-xl" style={{ color: 'var(--green)' }}>Verdant</h1>
-          <p className="text-[9px] tracking-[0.2em] uppercase opacity-50">Landscapes · Denver</p>
+          <p className="text-base tracking-[0.2em] uppercase opacity-80">Landscapes · Denver</p>
         </div>
-        <div className="hidden md:flex gap-8 text-sm opacity-70">
+        <div className="hidden md:flex gap-8 text-base opacity-90">
           {['services', 'work', 'plans', 'testimonials', 'faq', 'contact'].map(s => (
-            <button key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
+            <button className="btn" key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
           ))}
         </div>
-        <button onClick={() => scrollTo('contact')} className="text-sm px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
+        <button className="btn" onClick={() => scrollTo('contact')} className="text-base px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
       </nav>
 
       <main>
@@ -78,17 +78,17 @@ export default function Home() {
             <div>
               <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--sage)' }}>Design · Install · Maintain</p>
               <h2 className="heading-land text-5xl md:text-6xl mb-6" style={{ color: 'var(--green)' }}>Outdoor living,<br /><em>perfected.</em></h2>
-              <p className="text-lg opacity-60 mb-8 leading-relaxed max-w-lg">
+              <p className="text-lg opacity-85 mb-8 leading-relaxed max-w-lg">
                 For over 15 years, Verdant Landscapes has been Denver&apos;s premier full-service landscape company. We design, build, and maintain extraordinary outdoor environments that bring families together, increase property value, and connect you with nature right outside your door. From intimate courtyard gardens to sprawling estate landscapes, our team of certified designers, skilled craftspeople, and dedicated maintenance crews deliver results that exceed expectations every single time. Whether you are dreaming of a new patio for summer entertaining, need reliable weekly lawn care, or want a complete outdoor living transformation, we have the expertise and passion to make it happen. Let us show you what your property can become.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => scrollTo('contact')} className="btn px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
-                <button onClick={() => scrollTo('work')} className="btn-outline px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)' }}>View Our Work</button>
+                <button className="btn" onClick={() => scrollTo('contact')} className="btn px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
+                <button className="btn" onClick={() => scrollTo('work')} className="btn-outline px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)' }}>View Our Work</button>
               </div>
               <div className="flex gap-8 mt-10 text-sm">
-                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>500+</p><p className="opacity-50">Projects Completed</p></div>
-                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>15</p><p className="opacity-50">Years Experience</p></div>
-                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>4.9★</p><p className="opacity-50">Google Rating</p></div>
+                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>500+</p><p className="opacity-80">Projects Completed</p></div>
+                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>15</p><p className="opacity-80">Years Experience</p></div>
+                <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>4.9★</p><p className="opacity-80">Google Rating</p></div>
               </div>
             </div>
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Beautiful landscape design by Verdant Landscapes" className="w-full h-96 object-cover rounded-2xl img-hover" loading="lazy" />
@@ -101,14 +101,14 @@ export default function Home() {
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>What We Do</p>
               <h2 className="heading-land text-4xl mb-4">Comprehensive Landscape Services</h2>
-              <p className="opacity-60 max-w-2xl mx-auto">From initial concept through ongoing care, we handle every aspect of your outdoor environment. Our integrated approach ensures design intent is preserved through construction and maintained for years to come.</p>
+              <p className="opacity-85 max-w-2xl mx-auto">From initial concept through ongoing care, we handle every aspect of your outdoor environment. Our integrated approach ensures design intent is preserved through construction and maintained for years to come.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map(s => (
                 <div key={s.name} className="card p-6 rounded-lg hover:shadow-lg transition-shadow" style={{ border: '1px solid #e8e0d4' }}>
                   <p className="text-2xl mb-3">{s.icon}</p>
                   <h3 className="font-semibold mb-2">{s.name}</h3>
-                  <p className="text-sm opacity-60 leading-relaxed">{s.desc}</p>
+                  <p className="text-sm opacity-85 leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Portfolio</p>
               <h2 className="heading-land text-4xl mb-4">Before & After Transformations</h2>
-              <p className="opacity-60 max-w-2xl mx-auto">See the dramatic results our clients enjoy. Every project begins with a challenge and ends with an outdoor space that transforms how our clients live, entertain, and connect with their homes.</p>
+              <p className="opacity-85 max-w-2xl mx-auto">See the dramatic results our clients enjoy. Every project begins with a challenge and ends with an outdoor space that transforms how our clients live, entertain, and connect with their homes.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map(p => (
@@ -135,11 +135,11 @@ export default function Home() {
                     <div className="space-y-2 text-sm">
                       <div className="p-3 rounded-lg" style={{ background: '#fef2f2' }}>
                         <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#b91c1c' }}>Before</p>
-                        <p className="opacity-70 leading-relaxed">{p.before}</p>
+                        <p className="opacity-90 leading-relaxed">{p.before}</p>
                       </div>
                       <div className="p-3 rounded-lg" style={{ background: '#f0fdf4' }}>
                         <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#15803d' }}>After</p>
-                        <p className="opacity-70 leading-relaxed">{p.after}</p>
+                        <p className="opacity-90 leading-relaxed">{p.after}</p>
                       </div>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Year-Round Care</p>
               <h2 className="heading-land text-4xl mb-4">Maintenance Plans</h2>
-              <p className="opacity-60 max-w-2xl mx-auto">Protect your landscape investment with a proactive maintenance program. Our plans are designed to keep your property looking stunning in every season while preventing costly problems before they start.</p>
+              <p className="opacity-85 max-w-2xl mx-auto">Protect your landscape investment with a proactive maintenance program. Our plans are designed to keep your property looking stunning in every season while preventing costly problems before they start.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {maintenancePlans.map(plan => (
@@ -164,18 +164,18 @@ export default function Home() {
                   <h3 className="heading-land text-2xl mb-2">{plan.name}</h3>
                   <div className="mb-3">
                     <span className="heading-land text-4xl" style={{ color: 'var(--green)' }}>{plan.price}</span>
-                    <span className="opacity-50 text-sm">{plan.period}</span>
+                    <span className="opacity-80 text-sm">{plan.period}</span>
                   </div>
-                  <p className="text-sm opacity-60 mb-6 leading-relaxed">{plan.desc}</p>
+                  <p className="text-sm opacity-85 mb-6 leading-relaxed">{plan.desc}</p>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, i) => (
                       <li key={i} className="text-sm flex items-start gap-2">
                         <span style={{ color: 'var(--green)' }} className="mt-0.5">✓</span>
-                        <span className="opacity-70">{f}</span>
+                        <span className="opacity-90">{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <button onClick={() => scrollTo('contact')} className="btn w-full py-3 rounded-full font-medium text-sm" style={{ background: plan.popular ? 'var(--green)' : 'transparent', color: plan.popular ? 'white' : 'var(--green)', border: plan.popular ? 'none' : '2px solid var(--green)' }}>
+                  <button className="btn" onClick={() => scrollTo('contact')} className="btn w-full py-3 rounded-full font-medium text-sm" style={{ background: plan.popular ? 'var(--green)' : 'transparent', color: plan.popular ? 'white' : 'var(--green)', border: plan.popular ? 'none' : '2px solid var(--green)' }}>
                     Get Started
                   </button>
                 </div>
@@ -201,7 +201,7 @@ export default function Home() {
                 <div key={item.title} className="text-center">
                   <p className="text-4xl mb-4">{item.icon}</p>
                   <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm opacity-60 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm opacity-85 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -221,10 +221,10 @@ export default function Home() {
                   <div className="flex gap-1 mb-4">
                     {[1, 2, 3, 4, 5].map(s => <span key={s} style={{ color: '#f59e0b' }}>★</span>)}
                   </div>
-                  <p className="text-sm opacity-70 leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
+                  <p className="text-sm opacity-90 leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
                   <div>
                     <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-xs opacity-50">{t.location}</p>
+                    <p className="text-xs opacity-80">{t.location}</p>
                   </div>
                 </div>
               ))}
@@ -238,7 +238,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: 'var(--sage)' }}>Coverage</p>
               <h2 className="heading-land text-4xl mb-4">Service Areas</h2>
-              <p className="opacity-60 max-w-2xl mx-auto">Proudly serving the Denver Metro area and Front Range communities. If you do not see your city listed, give us a call — we are always expanding our service territory.</p>
+              <p className="opacity-85 max-w-2xl mx-auto">Proudly serving the Denver Metro area and Front Range communities. If you do not see your city listed, give us a call — we are always expanding our service territory.</p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map(area => (
@@ -258,16 +258,16 @@ export default function Home() {
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <div key={i} className="card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
-                  <button
+                  <button className="btn"
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="w-full text-left px-6 py-5 flex justify-between items-center gap-4"
                   >
                     <span className="font-semibold text-sm">{faq.q}</span>
-                    <span className="text-lg opacity-70 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
+                    <span className="text-lg opacity-90 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
                   </button>
                   {openFaq === i && (
                     <div className="px-6 pb-5">
-                      <p className="text-sm opacity-60 leading-relaxed">{faq.a}</p>
+                      <p className="text-sm opacity-85 leading-relaxed">{faq.a}</p>
                     </div>
                   )}
                 </div>
@@ -280,12 +280,12 @@ export default function Home() {
         <section id="contact" className="reveal py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase mb-3 opacity-70">Start Your Project</p>
+              <p className="text-xs tracking-[0.3em] uppercase mb-3 opacity-90">Start Your Project</p>
               <h2 className="heading-land text-4xl mb-6">Request a Free Estimate</h2>
-              <p className="opacity-70 mb-6 leading-relaxed">
+              <p className="opacity-90 mb-6 leading-relaxed">
                 Ready to transform your outdoor space? Fill out the form and one of our landscape consultants will contact you within one business day to schedule your complimentary on-site consultation. We will visit your property, discuss your vision and budget, take measurements, and deliver a detailed written proposal within 48 hours. There is absolutely no obligation and no pressure — just honest advice from professionals who love what they do.
               </p>
-              <div className="space-y-3 text-sm opacity-70 mb-8">
+              <div className="space-y-3 text-sm opacity-90 mb-8">
                 <p>📍 Serving Denver Metro &amp; Front Range since 2009</p>
                 <p>📞 <a href="tel:(303) 555-0178" className="underline">(303) 555-0178</a></p>
                 <p>📧 <a href="mailto:hello@verdantlandscapes.com" className="underline">hello@verdantlandscapes.com</a></p>
@@ -293,7 +293,7 @@ export default function Home() {
               </div>
               <div className="p-5 rounded-xl" style={{ background: 'rgba(255,255,255,0.1)' }}>
                 <p className="text-sm font-semibold mb-2">What to Expect</p>
-                <ul className="text-sm opacity-70 space-y-1">
+                <ul className="text-sm opacity-90 space-y-1">
                   <li>✓ Response within one business day</li>
                   <li>✓ Complimentary on-site consultation</li>
                   <li>✓ Detailed proposal within 48 hours</li>
@@ -307,25 +307,25 @@ export default function Home() {
                   <div className="text-center">
                     <p className="text-5xl mb-4">🎉</p>
                     <p className="heading-land text-2xl">Request Received!</p>
-                    <p className="opacity-70 text-sm mt-2">A member of our team will call you within one business day to schedule your free site visit. We look forward to meeting you.</p>
+                    <p className="opacity-90 text-sm mt-2">A member of our team will call you within one business day to schedule your free site visit. We look forward to meeting you.</p>
                   </div>
                 </div>
               ) : (
                 <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-4" style={{ color: '#1a1a1a' }}>
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                    <input type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   </div>
-                  <input type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <select className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }}>
+                  <input type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <select className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }}>
                     <option value="">Select a Service</option>
                     {services.map(s => <option key={s.name}>{s.name}</option>)}
                     <option>Multiple Services</option>
                     <option>Not Sure — Need Consultation</option>
                   </select>
-                  <select className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }}>
+                  <select className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }}>
                     <option value="">Estimated Budget Range</option>
                     <option>Under $5,000</option>
                     <option>$5,000 – $15,000</option>
@@ -334,9 +334,9 @@ export default function Home() {
                     <option>$100,000+</option>
                     <option>Not Sure Yet</option>
                   </select>
-                  <textarea rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <textarea rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <button type="submit" className="btn w-full py-3 rounded-full font-medium" style={{ background: 'var(--earth)', color: 'white' }}>Submit Request</button>
-                  <p className="text-xs text-center opacity-50" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
+                  <p className="text-xs text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
                 </form>
               )}
             </div>
@@ -350,23 +350,23 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="heading-land text-lg mb-2" style={{ color: 'var(--green)' }}>Verdant</h3>
-              <p className="text-xs opacity-50 leading-relaxed">Denver&apos;s premier full-service landscape company. Designing, building, and maintaining extraordinary outdoor spaces since 2009.</p>
+              <p className="text-xs opacity-80 leading-relaxed">Denver&apos;s premier full-service landscape company. Designing, building, and maintaining extraordinary outdoor spaces since 2009.</p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-50">Services</p>
-              <div className="space-y-1 text-xs opacity-50">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">Services</p>
+              <div className="space-y-1 text-xs opacity-80">
                 {services.slice(0, 4).map(s => <p key={s.name}>{s.name}</p>)}
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-50">More</p>
-              <div className="space-y-1 text-xs opacity-50">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">More</p>
+              <div className="space-y-1 text-xs opacity-80">
                 {services.slice(4).map(s => <p key={s.name}>{s.name}</p>)}
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-50">Contact</p>
-              <div className="space-y-1 text-xs opacity-50">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">Contact</p>
+              <div className="space-y-1 text-xs opacity-80">
                 <p>(303) 555-0178</p>
                 <p>hello@verdantlandscapes.com</p>
                 <p>Denver, CO 80202</p>
@@ -374,7 +374,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="text-center text-xs opacity-30 pt-6" style={{ borderTop: '1px solid #e8e0d4' }}>
+          <div className="text-center text-xs opacity-80 pt-6" style={{ borderTop: '1px solid #e8e0d4' }}>
             <p>&copy; 2024 Verdant Landscapes LLC. All rights reserved. Denver, Colorado.</p>
           </div>
         </div>
