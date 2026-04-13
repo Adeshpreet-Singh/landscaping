@@ -65,10 +65,10 @@ export default function Home() {
         </div>
         <div className="hidden md:flex gap-8 text-base opacity-90">
           {['services', 'work', 'plans', 'testimonials', 'faq', 'contact'].map(s => (
-            <button key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
+            <button style={{ cursor: "pointer" }} key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
           ))}
         </div>
-        <button onClick={() => scrollTo('contact')} className="text-base px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
+        <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="text-base px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
       </nav>
 
       <main>
@@ -82,8 +82,8 @@ export default function Home() {
                 For over 15 years, Verdant Landscapes has been Denver&apos;s premier full-service landscape company. We design, build, and maintain extraordinary outdoor environments that bring families together, increase property value, and connect you with nature right outside your door. From intimate courtyard gardens to sprawling estate landscapes, our team of certified designers, skilled craftspeople, and dedicated maintenance crews deliver results that exceed expectations every single time. Whether you are dreaming of a new patio for summer entertaining, need reliable weekly lawn care, or want a complete outdoor living transformation, we have the expertise and passion to make it happen. Let us show you what your property can become.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => scrollTo('contact')} className="px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
-                <button onClick={() => scrollTo('work')} className="px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)', background: 'transparent' }}>View Our Work</button>
+                <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
+                <button style={{ cursor: "pointer" }} onClick={() => scrollTo('work')} className="px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)', background: 'transparent' }}>View Our Work</button>
               </div>
               <div className="flex gap-8 mt-10 text-sm">
                 <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>500+</p><p className="opacity-80">Projects Completed</p></div>
@@ -175,7 +175,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <button onClick={() => scrollTo('contact')} className="w-full py-3 rounded-full font-medium text-sm" style={{ background: 'var(--green)', color: 'white' }}>
+                  <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="w-full py-3 rounded-full font-medium text-sm" style={{ background: 'var(--green)', color: 'white' }}>
                     Get Started
                   </button>
                 </div>
@@ -224,7 +224,7 @@ export default function Home() {
                   <p className="text-sm opacity-90 leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
                   <div>
                     <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-xs opacity-80">{t.location}</p>
+                    <p className="text-sm opacity-80">{t.location}</p>
                   </div>
                 </div>
               ))}
@@ -258,7 +258,7 @@ export default function Home() {
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <div key={i} className="card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
-                  <button className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-stone-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)} >
+                  <button style={{ cursor: "pointer" }} className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-stone-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)} >
                     <span className="font-semibold text-sm">{faq.q}</span>
                     <span className="text-lg opacity-90 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
                   </button>
@@ -277,7 +277,7 @@ export default function Home() {
         <section id="contact" className="reveal py-24 px-8" style={{ background: 'var(--green)', color: 'white' }}>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase mb-3 opacity-90">Start Your Project</p>
+              <p className="text-sm tracking-[0.3em] uppercase mb-3 opacity-90">Start Your Project</p>
               <h2 className="heading-land text-4xl mb-6">Request a Free Estimate</h2>
               <p className="opacity-90 mb-6 leading-relaxed">
                 Ready to transform your outdoor space? Fill out the form and one of our landscape consultants will contact you within one business day to schedule your complimentary on-site consultation. We will visit your property, discuss your vision and budget, take measurements, and deliver a detailed written proposal within 48 hours. There is absolutely no obligation and no pressure — just honest advice from professionals who love what they do.
@@ -310,12 +310,12 @@ export default function Home() {
               ) : (
                 <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-4" style={{ color: '#1a1a1a' }}>
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                    <input type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   </div>
-                  <input type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <select className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }}>
                     <option value="">Select a Service</option>
                     {services.map(s => <option key={s.name}>{s.name}</option>)}
@@ -332,8 +332,8 @@ export default function Home() {
                     <option>Not Sure Yet</option>
                   </select>
                   <textarea rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <button type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
-                  <p className="text-xs text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
+                  <button style={{ cursor: "pointer" }} type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
+                  <p className="text-sm text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
                 </form>
               )}
             </div>
@@ -347,23 +347,23 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="heading-land text-lg mb-2" style={{ color: 'var(--green)' }}>Verdant</h3>
-              <p className="text-xs opacity-80 leading-relaxed">Denver&apos;s premier full-service landscape company. Designing, building, and maintaining extraordinary outdoor spaces since 2009.</p>
+              <p className="text-sm opacity-80 leading-relaxed">Denver&apos;s premier full-service landscape company. Designing, building, and maintaining extraordinary outdoor spaces since 2009.</p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">Services</p>
-              <div className="space-y-1 text-xs opacity-80">
+              <p className="text-sm font-semibold uppercase tracking-wider mb-3 opacity-80">Services</p>
+              <div className="space-y-1 text-sm opacity-80">
                 {services.slice(0, 4).map(s => <p key={s.name}>{s.name}</p>)}
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">More</p>
-              <div className="space-y-1 text-xs opacity-80">
+              <p className="text-sm font-semibold uppercase tracking-wider mb-3 opacity-80">More</p>
+              <div className="space-y-1 text-sm opacity-80">
                 {services.slice(4).map(s => <p key={s.name}>{s.name}</p>)}
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3 opacity-80">Contact</p>
-              <div className="space-y-1 text-xs opacity-80">
+              <p className="text-sm font-semibold uppercase tracking-wider mb-3 opacity-80">Contact</p>
+              <div className="space-y-1 text-sm opacity-80">
                 <p>(303) 555-0178</p>
                 <p>hello@verdantlandscapes.com</p>
                 <p>Denver, CO 80202</p>
@@ -371,7 +371,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="text-center text-xs opacity-80 pt-6" style={{ borderTop: '1px solid #e8e0d4' }}>
+          <div className="text-center text-sm opacity-80 pt-6" style={{ borderTop: '1px solid #e8e0d4' }}>
             <p>&copy; 2024 Verdant Landscapes LLC. All rights reserved. Denver, Colorado.</p>
           </div>
         </div>
