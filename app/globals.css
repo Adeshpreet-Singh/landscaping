@@ -13,6 +13,10 @@
   --radius: 8px;
   --radius-lg: 12px;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --green: #2d6a4f;
+  --sage: #6b8f71;
+  --cream: #f8f6f0;
+  --earth: #8b6f47;
 }
 
 html { scroll-behavior: smooth; }
