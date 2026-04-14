@@ -310,12 +310,12 @@ export default function Home() {
               ) : (
                 <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-4" style={{ color: '#1a1a1a' }}>
                   <div className="grid grid-cols-2 gap-4">
-                    <input className="land-input" type="text" placeholder="First Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                    <input className="land-input" type="text" placeholder="Last Name" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 border-2 border-current/20" type="text" placeholder="First Name" required style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                    <input className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 border-2 border-current/20" type="text" placeholder="Last Name" required style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   </div>
-                  <input className="land-input" type="email" placeholder="Email Address" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input className="land-input" type="tel" placeholder="Phone Number" required className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <input className="land-input" type="text" placeholder="Property Address" className="w-full px-4 py-3 rounded-lg border border-gray-300  border-2 border-current/20" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 border-2 border-current/20" type="email" placeholder="Email Address" required style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 border-2 border-current/20" type="tel" placeholder="Phone Number" required style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <input className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 border-2 border-current/20" type="text" placeholder="Property Address" style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <select className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }}>
                     <option value="">Select a Service</option>
                     {services.map(s => <option key={s.name}>{s.name}</option>)}
@@ -331,7 +331,7 @@ export default function Home() {
                     <option>$100,000+</option>
                     <option>Not Sure Yet</option>
                   </select>
-                  <textarea className="land-input" rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
+                  <textarea className="land-input w-full px-4 py-3 rounded-lg border border-gray-300 " rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." style={{ border: '1px solid #e8e0d4', background: 'white' }} />
                   <button type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
                   <p className="text-sm text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
                 </form>
