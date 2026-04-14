@@ -65,10 +65,10 @@ export default function Home() {
         </div>
         <div className="hidden md:flex gap-8 text-base opacity-90">
           {['services', 'work', 'plans', 'testimonials', 'faq', 'contact'].map(s => (
-            <button style={{ cursor: "pointer" }} key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
+            <button key={s} onClick={() => scrollTo(s)} className="capitalize">{s}</button>
           ))}
         </div>
-        <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="text-base px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
+        <button onClick={() => scrollTo('contact')} className="text-base px-5 py-2 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Free Estimate</button>
       </nav>
 
       <main>
@@ -82,8 +82,8 @@ export default function Home() {
                 For over 15 years, Verdant Landscapes has been Denver&apos;s premier full-service landscape company. We design, build, and maintain extraordinary outdoor environments that bring families together, increase property value, and connect you with nature right outside your door. From intimate courtyard gardens to sprawling estate landscapes, our team of certified designers, skilled craftspeople, and dedicated maintenance crews deliver results that exceed expectations every single time. Whether you are dreaming of a new patio for summer entertaining, need reliable weekly lawn care, or want a complete outdoor living transformation, we have the expertise and passion to make it happen. Let us show you what your property can become.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
-                <button style={{ cursor: "pointer" }} onClick={() => scrollTo('work')} className="px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)', background: 'transparent' }}>View Our Work</button>
+                <button onClick={() => scrollTo('contact')} className="px-8 py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Get Free Estimate</button>
+                <button onClick={() => scrollTo('work')} className="px-8 py-3 rounded-full font-medium" style={{ border: '2px solid var(--green)', color: 'var(--green)', background: 'transparent' }}>View Our Work</button>
               </div>
               <div className="flex gap-8 mt-10 text-sm">
                 <div><p className="heading-land text-2xl" style={{ color: 'var(--green)' }}>500+</p><p className="opacity-80">Projects Completed</p></div>
@@ -175,7 +175,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <button style={{ cursor: "pointer" }} onClick={() => scrollTo('contact')} className="w-full py-3 rounded-full font-medium text-sm" style={{ background: 'var(--green)', color: 'white' }}>
+                  <button onClick={() => scrollTo('contact')} className="w-full py-3 rounded-full font-medium text-sm" style={{ background: 'var(--green)', color: 'white' }}>
                     Get Started
                   </button>
                 </div>
@@ -258,7 +258,7 @@ export default function Home() {
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <div key={i} className="land-card rounded-xl overflow-hidden" style={{ border: '1px solid #e8e0d4' }}>
-                  <button style={{ cursor: "pointer" }} className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-stone-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)} >
+                  <button className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-stone-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)} >
                     <span className="font-semibold text-sm">{faq.q}</span>
                     <span className="text-lg opacity-90 shrink-0" style={{ transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.2s' }}>+</span>
                   </button>
@@ -332,7 +332,7 @@ export default function Home() {
                     <option>Not Sure Yet</option>
                   </select>
                   <textarea className="land-input" rows={4} placeholder="Tell us about your project, timeline, and any inspiration or ideas you have..." className="w-full px-4 py-3 rounded-lg border border-gray-300 " style={{ border: '1px solid #e8e0d4', background: 'white' }} />
-                  <button style={{ cursor: "pointer" }} type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
+                  <button type="submit" className="w-full py-3 rounded-full font-medium" style={{ background: 'var(--green)', color: 'white' }}>Submit Request</button>
                   <p className="text-sm text-center opacity-80" style={{ color: '#666' }}>By submitting, you agree to receive communications from Verdant Landscapes. We never share your information.</p>
                 </form>
               )}
