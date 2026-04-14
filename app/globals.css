@@ -4,8 +4,9 @@
 :root {
   --land-cream: #faf5eb;
   --land-cream-earth: #f2e8d2;
-  --land-forest: #2d5a27;
-  --land-forest-deep: #1e4a1a;
+  --land-forest: #228B22;
+  --land-forest-deep: #1a6b1a;
+  --land-forest-dark: #0f4f0f;
   --land-brown: #8b6914;
   --land-brown-dark: #6b5010;
   --land-terra: #c4704b;
@@ -21,13 +22,16 @@
   --land-shadow-lg: 0 14px 44px rgba(46, 40, 24, 0.11);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--land-cream);
   color: var(--land-text);
   font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6, .heading {
@@ -37,9 +41,11 @@ h1, h2, h3, h4, h5, h6, .heading {
   color: var(--land-text);
 }
 
-p, li, span, td, label, dd { line-height: 1.75; }
+p, li, span, td, label, dd {
+  line-height: 1.75;
+}
 
-/* Landscape cards - earthy, natural */
+/* ─── Cards ─── */
 .land-card {
   background: white;
   border: 1.5px solid var(--land-border);
@@ -47,7 +53,14 @@ p, li, span, td, label, dd { line-height: 1.75; }
   padding: 2rem;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
+.land-card > *:last-child {
+  margin-top: auto;
+}
+
 .land-card::before {
   content: '';
   position: absolute;
@@ -59,14 +72,26 @@ p, li, span, td, label, dd { line-height: 1.75; }
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+
 .land-card:hover {
   box-shadow: var(--land-shadow-lg);
   transform: translateY(-5px);
   border-color: var(--land-sage);
 }
-.land-card:hover::before { opacity: 1; }
 
-/* Primary button - deep forest */
+.land-card:hover::before {
+  opacity: 1;
+}
+
+/* Staggered card animation delays */
+.land-card:nth-child(1) { transition-delay: 0ms; }
+.land-card:nth-child(2) { transition-delay: 80ms; }
+.land-card:nth-child(3) { transition-delay: 160ms; }
+.land-card:nth-child(4) { transition-delay: 240ms; }
+.land-card:nth-child(5) { transition-delay: 320ms; }
+.land-card:nth-child(6) { transition-delay: 400ms; }
+
+/* ─── Buttons ─── */
 .land-btn {
   background: var(--land-forest);
   color: var(--land-cream);
@@ -80,19 +105,22 @@ p, li, span, td, label, dd { line-height: 1.75; }
   display: inline-block;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(45, 90, 39, 0.22);
+  box-shadow: 0 4px 14px rgba(34, 139, 34, 0.22);
 }
+
 .land-btn:hover {
   background: var(--land-forest-deep);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(45, 90, 39, 0.32);
+  box-shadow: 0 8px 24px rgba(34, 139, 34, 0.32);
 }
-.land-btn:active { transform: scale(0.97); }
 
-/* Outline button */
+.land-btn:active {
+  transform: scale(0.97);
+}
+
 .land-btn-outline {
-  border: 2px solid var(--land-border);
-  color: var(--land-text);
+  border: 2px solid var(--land-forest);
+  color: var(--land-forest);
   padding: 0.8rem 2rem;
   border-radius: 50px;
   font-weight: 600;
@@ -103,22 +131,24 @@ p, li, span, td, label, dd { line-height: 1.75; }
   background: transparent;
   cursor: pointer;
 }
+
 .land-btn-outline:hover {
-  border-color: var(--land-forest);
-  color: var(--land-forest);
+  background: var(--land-forest);
+  color: var(--land-cream);
+  box-shadow: 0 4px 14px rgba(34, 139, 34, 0.22);
 }
 
-/* Hero - rich earth gradient */
+/* ─── Hero ─── */
 .land-hero {
   background: linear-gradient(140deg, var(--land-cream-earth) 0%, var(--land-cream) 55%, #f5efe0 100%);
 }
 
-/* Alt section */
+/* ─── Alt section ─── */
 .land-section-alt {
-  background: var(--land-cream-earth);
+  background: white;
 }
 
-/* Badge */
+/* ─── Badge ─── */
 .land-badge {
   display: inline-block;
   padding: 0.3rem 0.9rem;
@@ -127,12 +157,12 @@ p, li, span, td, label, dd { line-height: 1.75; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(45, 90, 39, 0.08);
+  background: rgba(34, 139, 34, 0.08);
   color: var(--land-forest);
   font-family: 'Karla', sans-serif;
 }
 
-/* Form inputs */
+/* ─── Form inputs ─── */
 .land-input {
   background: white !important;
   border: 1.5px solid var(--land-border) !important;
@@ -144,64 +174,61 @@ p, li, span, td, label, dd { line-height: 1.75; }
   transition: all 0.3s ease;
   width: 100%;
 }
+
 .land-input:focus {
   border-color: var(--land-forest) !important;
   outline: none;
-  box-shadow: 0 0 0 4px rgba(45, 90, 39, 0.1);
+  box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.1);
 }
+
 .land-input::placeholder {
   color: rgba(46, 40, 24, 0.35) !important;
 }
 
-/* Image wrap */
+/* ─── Image wraps ─── */
 .land-img-wrap {
   overflow: hidden;
   border-radius: var(--land-radius-lg);
 }
+
 .land-img-wrap img {
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0;
 }
-.land-img-wrap:hover img { transform: scale(1.06); }
 
-/* Scroll reveal */
+.land-img-wrap:hover img {
+  transform: scale(1.06);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ─── Scroll reveal ─── */
 .land-reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.land-reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* Decorative tree ring pattern */
-.land-tree-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(45, 90, 39, 0.04);
-  pointer-events: none;
+  transition:
+    opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Ground texture overlay */
-.land-ground-texture {
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(122, 158, 110, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 105, 20, 0.03) 0%, transparent 50%);
+.land-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Staggered cards */
-.land-card:nth-child(1) { transition-delay: 0ms; }
-.land-card:nth-child(2) { transition-delay: 80ms; }
-.land-card:nth-child(3) { transition-delay: 160ms; }
-.land-card:nth-child(4) { transition-delay: 240ms; }
-.land-card:nth-child(5) { transition-delay: 320ms; }
-.land-card:nth-child(6) { transition-delay: 400ms; }
-
-/* Navigation */
+/* ─── Navigation ─── */
 .land-nav {
   background: rgba(250, 245, 235, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--land-border);
 }
+
 .land-nav-link {
   color: var(--land-text-muted);
   font-weight: 500;
@@ -212,9 +239,38 @@ p, li, span, td, label, dd { line-height: 1.75; }
   border: none;
   font-family: 'Karla', sans-serif;
 }
-.land-nav-link:hover { color: var(--land-forest); }
 
-/* FAQ */
+.land-nav-link:hover {
+  color: var(--land-forest);
+}
+
+/* ─── Icon circle ─── */
+.land-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(34, 139, 34, 0.08), rgba(122, 158, 110, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* ─── Decorative ─── */
+.land-tree-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(34, 139, 34, 0.04);
+  pointer-events: none;
+}
+
+.land-ground-texture {
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(122, 158, 110, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 105, 20, 0.03) 0%, transparent 50%);
+}
+
+/* ─── FAQ ─── */
 .land-faq-item {
   background: white;
   border: 1.5px solid var(--land-border);
@@ -223,47 +279,75 @@ p, li, span, td, label, dd { line-height: 1.75; }
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .land-faq-item:hover {
   box-shadow: var(--land-shadow);
   border-color: var(--land-sage);
 }
 
-/* Service icon circle */
-.land-icon-circle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(45, 90, 39, 0.08), rgba(122, 158, 110, 0.12));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+/* ─── Selection ─── */
+::selection {
+  background: rgba(34, 139, 34, 0.12);
 }
 
-/* Selection */
-::selection { background: rgba(45, 90, 39, 0.12); }
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 7px;
+}
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 7px; }
-::-webkit-scrollbar-track { background: var(--land-cream); }
-::-webkit-scrollbar-thumb { background: var(--land-border); border-radius: 4px; }
+::-webkit-scrollbar-track {
+  background: var(--land-cream);
+}
 
-/* Focus */
-*:focus-visible { outline: 2px solid var(--land-forest); outline-offset: 3px; }
+::-webkit-scrollbar-thumb {
+  background: var(--land-border);
+  border-radius: 4px;
+}
 
-/* Reduced motion */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--land-sage);
+}
+
+/* ─── Focus ─── */
+*:focus-visible {
+  outline: 2px solid var(--land-forest);
+  outline-offset: 3px;
+}
+
+/* ─── Utility ─── */
+button {
+  cursor: pointer;
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+p, li, span, td, label, dd {
+  font-size: max(14px, inherit);
+  line-height: 1.7;
+}
+
+/* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  .land-reveal { opacity: 1; transform: none; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .land-reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
+/* ─── Mobile ─── */
 @media (max-width: 768px) {
-  section { padding-left: 1rem !important; padding-right: 1rem !important; }
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
-
-.land-card { display: flex; flex-direction: column; }
-.land-card > *:last-child { margin-top: auto; }
-img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
-button { cursor: pointer; }
-section { overflow: hidden; position: relative; }
-p, li, span, td, label, dd { font-size: max(14px, inherit); line-height: 1.7; }
