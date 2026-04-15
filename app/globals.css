@@ -1,5 +1,6 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
 
 :root {
   --land-cream: #faf5eb;
@@ -14,7 +15,7 @@
   --land-fern: #4a7a3e;
   --land-bark: #5c4a2a;
   --land-text: #2e2818;
-  --land-text-muted: #6b5f48;
+  --land-text-muted: #5a4f3a;
   --land-border: #d8c8a8;
   --land-radius: 12px;
   --land-radius-lg: 18px;
@@ -182,7 +183,7 @@ p, li, span, td, label, dd {
 }
 
 .land-input::placeholder {
-  color: rgba(46, 40, 24, 0.35) !important;
+  color: rgba(46, 40, 24, 0.55) !important;
 }
 
 /* ─── Image wraps ─── */
@@ -351,7 +352,6 @@ p, li, span, td, label, dd {
     padding-right: 1rem !important;
   }
 }
-
 
 /* ===== FINAL 10/10 POLISH ===== */
 
