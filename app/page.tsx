@@ -83,7 +83,7 @@ function useReveal() {
 
 function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useReveal();
-  return <div ref={ref} className={`land-reveal ${className}`}>{children}</div>;
+  return <div ref={ref} className={'land-reveal ${className}'}>{children}</div>;
 }
 
 export default function Home() {
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase()}`} className="land-nav-link">{l}</a>
+              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link">{l}</a>
             ))}
             <a href="#booking" className="land-btn" style={{ padding: '0.6rem 1.5rem', fontSize: '0.82rem' }}>Free Consultation</a>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
         {menuOpen && (
           <div style={{ padding: '1rem 0 1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase()}`} className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
+              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
             ))}
           </div>
         )}
@@ -150,45 +150,44 @@ export default function Home() {
 
       <section className="section reveal">
         <div className="container">
-          <h2 className="text-center" style={ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }>
+          <h2 className="text-center" style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }}>
             Meet Our Team
           </h2>
-          <p className="text-center" style={ 
-            color: 'var(--text-secondary)', 
+          <p className="text-center" style={{ color: 'var(--text-secondary)', 
             maxWidth: '700px', 
             margin: '0 auto 3rem',
             fontSize: '1.125rem'
-          }>
+           }}>
             Our talented team of professionals brings diverse expertise and passion to every project.
           </p>
-          <div style={ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }>
-            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem'  }}>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
               <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
-              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>John Smith</h3>
-              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>CEO & Founder</p>
-              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>John Smith</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>CEO & Founder</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
                 15+ years of industry experience leading successful projects.
               </p>
             </div>
-            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
-              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>Sarah Johnson</h3>
-              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>Creative Director</p>
-              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>Sarah Johnson</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>Creative Director</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
                 Award-winning designer with a passion for innovative solutions.
               </p>
             </div>
-            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
-              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>Michael Chen</h3>
-              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>Technical Lead</p>
-              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>Michael Chen</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>Technical Lead</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
                 Expert in modern technologies and scalable architecture.
               </p>
             </div>
@@ -416,28 +415,26 @@ export default function Home() {
 
       {/* ─── FOOTER ─── */}
       
-      <section className="section reveal" style={ 
-        background: `linear-gradient(135deg, #16a34a, #16a34add)`,
+      <section className="section reveal" style={{  background: 'linear-gradient(135deg, #16a34a, #16a34add)',
         color: 'white',
         textAlign: 'center'
-      }>
+       }}>
         <div className="container">
-          <h2 style={ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }}>
             Ready to Transform Your Business?
           </h2>
-          <p style={ 
-            fontSize: '1.25rem', 
+          <p style={{ fontSize: '1.25rem', 
             opacity: 0.9,
             maxWidth: '600px',
             margin: '0 auto 2.5rem'
-          }>
+           }}>
             Join hundreds of satisfied clients who have achieved remarkable results with our landscaping solutions.
           </p>
-          <div style={ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }>
-            <button className="btn-primary btn-lg" style={ background: 'white', color: '#16a34a' }>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'  }}>
+            <button className="btn-primary btn-lg" style={{  background: 'white', color: '#16a34a'  }}>
               Start Your Project Today
             </button>
-            <button className="btn-secondary btn-lg" style={ borderColor: 'white', color: 'white' }>
+            <button className="btn-secondary btn-lg" style={{ borderColor: 'white', color: 'white'  }}>
               Schedule a Call
             </button>
           </div>
@@ -455,7 +452,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase()}`} className="land-nav-link" style={{ fontSize: '0.82rem' }}>{l}</a>
+              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link" style={{ fontSize: '0.82rem' }}>{l}</a>
             ))}
           </div>
           <p style={{ fontSize: '0.75rem', color: 'var(--land-text-muted)' }}>&copy; 2026 Verdant Studio. All rights reserved.</p>
