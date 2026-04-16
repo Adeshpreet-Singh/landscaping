@@ -83,7 +83,7 @@ function useReveal() {
 
 function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useReveal();
-  return <div ref={ref} className={'land-reveal ${className}'}>{children}</div>;
+  return <div ref={ref} className={`land-reveal ${classNam}e}`}>{children}</div>;
 }
 
 export default function Home() {
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
             {NAV_LINKS.map(l => (
-              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link">{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link">{l}</a>
             ))}
             <a href="#booking" className="land-btn" style={{ padding: '0.6rem 1.5rem', fontSize: '0.82rem' }}>Free Consultation</a>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
         {menuOpen && (
           <div style={{ padding: '1rem 0 1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
             {NAV_LINKS.map(l => (
-              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
             ))}
           </div>
         )}
@@ -452,7 +452,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
             {NAV_LINKS.map(l => (
-              <a key={l} href={'#${l.toLowerCase()}'} className="land-nav-link" style={{ fontSize: '0.82rem' }}>{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link" style={{ fontSize: '0.82rem' }}>{l}</a>
             ))}
           </div>
           <p style={{ fontSize: '0.75rem', color: 'var(--land-text-muted)' }}>&copy; 2026 Verdant Studio. All rights reserved.</p>
