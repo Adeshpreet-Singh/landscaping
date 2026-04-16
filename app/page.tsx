@@ -83,7 +83,7 @@ function useReveal() {
 
 function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useReveal();
-  return <div ref={ref} className={`land-reveal ${classNam}e}`}>{children}</div>;
+  return <div ref={ref} className={`land-reveal ${classNam}e}`>>{children}</div>;
 }
 
 export default function Home() {
@@ -93,101 +93,101 @@ export default function Home() {
   return (
     <div>
       {/* ─── NAVIGATION ─── */}
-      <nav className="land-nav" style={{ position: 'sticky', top: 0, zIndex: 100, padding: '0 2rem' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 70 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span style={{ fontSize: '1.6rem' }}>🌿</span>
-            <span className="heading" style={{ fontSize: '1.4rem', fontWeight: 600 }}>Verdant Studio</span>
+      <nav className="land-nav" style={{ position: 'sticky', top: 0, zIndex: 100, padding: '0 2rem' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 70 }>>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }>>
+            <span style={{ fontSize: '1.6rem' }>>🌿</span>
+            <span className="heading" style={{ fontSize: '1.4rem', fontWeight: 600 }>>Verdant Studio</span>
           </div>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }> className="hidden-mobile">
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link">{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`> className="land-nav-link">{l}</a>
             ))}
-            <a href="#booking" className="land-btn" style={{ padding: '0.6rem 1.5rem', fontSize: '0.82rem' }}>Free Consultation</a>
+            <a href="#booking" className="land-btn" style={{ padding: '0.6rem 1.5rem', fontSize: '0.82rem' }>>Free Consultation</a>
           </div>
           <button onClick={() => setMenuOpen(!menuOpen)} className="land-nav-link" style={{ display: 'none', fontSize: '1.5rem' }} aria-label="Menu">
             {menuOpen ? '✕' : '☰'}
           </button>
         </div>
         {menuOpen && (
-          <div style={{ padding: '1rem 0 1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+          <div style={{ padding: '1rem 0 1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }>>
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`> className="land-nav-link" onClick={() => setMenuOpen(false)}>{l}</a>
             ))}
           </div>
         )}
       </nav>
 
       {/* ─── HERO ─── */}
-      <section className="land-hero" style={{ padding: '6rem 2rem 5rem' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+      <section className="land-hero" style={{ padding: '6rem 2rem 5rem' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }>>
           <div>
             <span className="land-badge">Award-Winning Landscape Architecture</span>
-            <h1 className="heading" style={{ fontSize: 'clamp(2.4rem, 5vw, 3.6rem)', marginTop: '1.25rem', marginBottom: '1.25rem', lineHeight: 1.1 }}>
+            <h1 className="heading" style={{ fontSize: 'clamp(2.4rem, 5vw, 3.6rem)', marginTop: '1.25rem', marginBottom: '1.25rem', lineHeight: 1.1 }>>
               Where Nature Meets<br />Thoughtful Design
             </h1>
-            <p style={{ fontSize: '1.1rem', color: 'var(--land-text-muted)', marginBottom: '2rem', maxWidth: 480 }}>
+            <p style={{ fontSize: '1.1rem', color: 'var(--land-text-muted)', marginBottom: '2rem', maxWidth: 480 }>>
               We craft outdoor environments that invite connection — with the land, the seasons, and the people who share the space. From intimate courtyards to sweeping estates, every project starts with listening.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }>>
               <a href="#booking" className="land-btn">Book a Free Site Visit</a>
               <a href="#portfolio" className="land-btn-outline">View Our Work</a>
             </div>
-            <div style={{ display: 'flex', gap: '2rem', marginTop: '2.5rem' }}>
+            <div style={{ display: 'flex', gap: '2rem', marginTop: '2.5rem' }>>
               {[['25+', 'Years Experience'], ['600+', 'Projects Completed'], ['98%', 'Client Satisfaction']].map(([n, l]) => (
-                <div key={l}>
-                  <div className="heading" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--land-forest)' }}>{n}</div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--land-text-muted)', letterSpacing: '0.04em' }}>{l}</div>
+                <div key={l>>
+                  <div className="heading" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--land-forest)' }>>{n}</div>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--land-text-muted)', letterSpacing: '0.04em' }>>{l}</div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="land-img-wrap" style={{ height: 460 }}>
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=700&h=520&fit=crop" alt="Lush garden design with stone pathway" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div className="land-img-wrap" style={{ height: 460 }>>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=700&h=520&fit=crop" alt="Lush garden design with stone pathway" style={{ width: '100%', height: '100%', objectFit: 'cover' }> />
           </div>
         </div>
       </section>
 
       <section className="section reveal">
         <div className="container">
-          <h2 className="text-center" style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }}>
+          <h2 className="text-center" style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }>>
             Meet Our Team
           </h2>
           <p className="text-center" style={{ color: 'var(--text-secondary)', 
             maxWidth: '700px', 
             margin: '0 auto 3rem',
             fontSize: '1.125rem'
-           }}>
+           }>>
             Our talented team of professionals brings diverse expertise and passion to every project.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem'  }}>
-            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem'  }>>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }>>
               <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>John Smith</h3>
-              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>CEO & Founder</p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }> />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }>>John Smith</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }>>CEO & Founder</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }>>
                 15+ years of industry experience leading successful projects.
               </p>
             </div>
-            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }>>
               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>Sarah Johnson</h3>
-              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>Creative Director</p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }> />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }>>Sarah Johnson</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }>>Creative Director</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }>>
                 Award-winning designer with a passion for innovative solutions.
               </p>
             </div>
-            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }}>
+            <div className="card hover-lift" style={{ textAlign: 'center', padding: '2rem'  }>>
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" 
                    alt="Team member" 
-                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }} />
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }}>Michael Chen</h3>
-              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }}>Technical Lead</p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }}>
+                   style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem'  }> />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold'  }>>Michael Chen</h3>
+              <p style={{ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem'  }>>Technical Lead</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem'  }>>
                 Expert in modern technologies and scalable architecture.
               </p>
             </div>
@@ -197,24 +197,24 @@ export default function Home() {
 
 
       {/* ─── SERVICES ─── */}
-      <section id="services" style={{ padding: '5rem 2rem', background: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section id="services" style={{ padding: '5rem 2rem', background: 'white' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }>>
               <span className="land-badge">What We Do</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>Comprehensive Outdoor Services</h2>
-              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }}>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>Comprehensive Outdoor Services</h2>
+              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }>>
                 From first pencil line to final planting, we handle every detail so you can step outside and simply enjoy.
               </p>
             </div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }>>
             {SERVICES.map((s, i) => (
-              <Reveal key={i}>
+              <Reveal key={i>>
                 <div className="land-card">
-                  <div className="land-icon-circle" style={{ marginBottom: '1rem' }}>{s.icon}</div>
-                  <h3 className="heading" style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{s.title}</h3>
-                  <p style={{ color: 'var(--land-text-muted)', fontSize: '0.95rem' }}>{s.desc}</p>
+                  <div className="land-icon-circle" style={{ marginBottom: '1rem' }>>{s.icon}</div>
+                  <h3 className="heading" style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }>>{s.title}</h3>
+                  <p style={{ color: 'var(--land-text-muted)', fontSize: '0.95rem' }>>{s.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -223,25 +223,25 @@ export default function Home() {
       </section>
 
       {/* ─── PORTFOLIO ─── */}
-      <section id="portfolio" style={{ padding: '5rem 2rem' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section id="portfolio" style={{ padding: '5rem 2rem' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }>>
               <span className="land-badge">Portfolio</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>Gardens We Have Brought to Life</h2>
-              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }}>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>Gardens We Have Brought to Life</h2>
+              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }>>
                 Each project reflects the personality of its owner and the character of the land. Browse a selection of our recent work.
               </p>
             </div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }>>
             {PORTFOLIO.map((p, i) => (
-              <Reveal key={i}>
-                <div className="land-img-wrap" style={{ position: 'relative' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: 280, objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.5rem', background: 'linear-gradient(transparent, rgba(0,0,0,0.65))', borderRadius: '0 0 var(--land-radius-lg) var(--land-radius-lg)' }}>
-                    <span className="land-badge" style={{ background: 'rgba(255,255,255,0.2)', color: 'white', marginBottom: '0.4rem' }}>{p.tag}</span>
-                    <h3 className="heading" style={{ color: 'white', fontSize: '1.15rem' }}>{p.title}</h3>
+              <Reveal key={i>>
+                <div className="land-img-wrap" style={{ position: 'relative' }>>
+                  <img src={p.img} alt={p.title} style={{ width: '100%', height: 280, objectFit: 'cover' }> />
+                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.5rem', background: 'linear-gradient(transparent, rgba(0,0,0,0.65))', borderRadius: '0 0 var(--land-radius-lg) var(--land-radius-lg)' }>>
+                    <span className="land-badge" style={{ background: 'rgba(255,255,255,0.2)', color: 'white', marginBottom: '0.4rem' }>>{p.tag}</span>
+                    <h3 className="heading" style={{ color: 'white', fontSize: '1.15rem' }>>{p.title}</h3>
                   </div>
                 </div>
               </Reveal>
@@ -251,24 +251,24 @@ export default function Home() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section id="process" style={{ padding: '5rem 2rem', background: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section id="process" style={{ padding: '5rem 2rem', background: 'white' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }>>
               <span className="land-badge">Our Process</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>From Vision to Reality</h2>
-              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }}>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>From Vision to Reality</h2>
+              <p style={{ color: 'var(--land-text-muted)', maxWidth: 620, margin: '1rem auto 0' }>>
                 A clear, collaborative process keeps every project on track and ensures results you will love for years.
               </p>
             </div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1.5rem' }>>
             {PROCESS.map((p, i) => (
-              <Reveal key={i}>
-                <div className="land-card" style={{ textAlign: 'center' }}>
-                  <div className="heading" style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--land-sage)', marginBottom: '0.5rem' }}>{p.step}</div>
-                  <h3 className="heading" style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>{p.title}</h3>
-                  <p style={{ color: 'var(--land-text-muted)', fontSize: '0.92rem' }}>{p.desc}</p>
+              <Reveal key={i>>
+                <div className="land-card" style={{ textAlign: 'center' }>>
+                  <div className="heading" style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--land-sage)', marginBottom: '0.5rem' }>>{p.step}</div>
+                  <h3 className="heading" style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }>>{p.title}</h3>
+                  <p style={{ color: 'var(--land-text-muted)', fontSize: '0.92rem' }>>{p.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -277,49 +277,49 @@ export default function Home() {
       </section>
 
       {/* ─── FEATURED PROJECT ─── */}
-      <section style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, var(--land-forest-dark), var(--land-forest))', color: 'var(--land-cream)' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+      <section style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, var(--land-forest-dark), var(--land-forest))', color: 'var(--land-cream)' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }>>
           <div className="land-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&h=500&fit=crop" alt="Luxury estate garden at dusk" style={{ width: '100%', height: 400, objectFit: 'cover' }} />
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&h=500&fit=crop" alt="Luxury estate garden at dusk" style={{ width: '100%', height: 400, objectFit: 'cover' }> />
           </div>
           <div>
-            <span className="land-badge" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--land-cream)' }}>Featured Project</span>
-            <h2 className="heading" style={{ fontSize: '2.4rem', marginTop: '1rem', marginBottom: '1rem', color: 'var(--land-cream)' }}>The Willowbrook Estate</h2>
-            <p style={{ opacity: 0.9, marginBottom: '1.5rem', lineHeight: 1.8 }}>
+            <span className="land-badge" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--land-cream)' }>>Featured Project</span>
+            <h2 className="heading" style={{ fontSize: '2.4rem', marginTop: '1rem', marginBottom: '1rem', color: 'var(--land-cream)' }>>The Willowbrook Estate</h2>
+            <p style={{ opacity: 0.9, marginBottom: '1.5rem', lineHeight: 1.8 }>>
               A three-acre historic property transformed into a series of interconnected garden rooms. Native meadow plantings replaced high-maintenance lawns, stone terraces navigate the slope, and a moonlight-inspired lighting scheme turns evenings into magic.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }>>
               {[['3 acres', 'Total Area'], ['14 months', 'Build Duration'], ['120+ species', 'Plants Used'], ['45%', 'Water Savings']].map(([n, l]) => (
-                <div key={l}>
-                  <div className="heading" style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--land-cream)' }}>{n}</div>
-                  <div style={{ fontSize: '0.78rem', opacity: 0.7, letterSpacing: '0.04em' }}>{l}</div>
+                <div key={l>>
+                  <div className="heading" style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--land-cream)' }>>{n}</div>
+                  <div style={{ fontSize: '0.78rem', opacity: 0.7, letterSpacing: '0.04em' }>>{l}</div>
                 </div>
               ))}
             </div>
-            <a href="#booking" className="land-btn" style={{ background: 'var(--land-cream)', color: 'var(--land-forest)' }}>Start Your Project</a>
+            <a href="#booking" className="land-btn" style={{ background: 'var(--land-cream)', color: 'var(--land-forest)' }>>Start Your Project</a>
           </div>
         </div>
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section style={{ padding: '5rem 2rem' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section style={{ padding: '5rem 2rem' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }>>
               <span className="land-badge">Testimonials</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>What Our Clients Say</h2>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>What Our Clients Say</h2>
             </div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }>>
             {TESTIMONIALS.map((t, i) => (
-              <Reveal key={i}>
+              <Reveal key={i>>
                 <div className="land-card">
-                  <p style={{ fontSize: '1.05rem', fontStyle: 'italic', color: 'var(--land-text)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
+                  <p style={{ fontSize: '1.05rem', fontStyle: 'italic', color: 'var(--land-text)', marginBottom: '1.5rem', lineHeight: 1.8 }>>
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div>
-                    <div style={{ fontWeight: 700, color: 'var(--land-forest)' }}>{t.name}</div>
-                    <div style={{ fontSize: '0.82rem', color: 'var(--land-text-muted)' }}>{t.role}</div>
+                    <div style={{ fontWeight: 700, color: 'var(--land-forest)' }>>{t.name}</div>
+                    <div style={{ fontSize: '0.82rem', color: 'var(--land-text-muted)' }>>{t.role}</div>
                   </div>
                 </div>
               </Reveal>
@@ -329,24 +329,24 @@ export default function Home() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section style={{ padding: '5rem 2rem', background: 'white' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+      <section style={{ padding: '5rem 2rem', background: 'white' }>>
+        <div style={{ maxWidth: 800, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }>>
               <span className="land-badge">FAQ</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>Common Questions</h2>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>Common Questions</h2>
             </div>
           </Reveal>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }>>
             {FAQS.map((f, i) => (
-              <Reveal key={i}>
+              <Reveal key={i>>
                 <div className="land-faq-item" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <h3 className="heading" style={{ fontSize: '1.05rem' }}>{f.q}</h3>
-                    <span style={{ fontSize: '1.4rem', color: 'var(--land-sage)', transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)' }}>+</span>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }>>
+                    <h3 className="heading" style={{ fontSize: '1.05rem' }>>{f.q}</h3>
+                    <span style={{ fontSize: '1.4rem', color: 'var(--land-sage)', transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)' }>>+</span>
                   </div>
                   {openFaq === i && (
-                    <p style={{ marginTop: '0.75rem', color: 'var(--land-text-muted)', fontSize: '0.95rem' }}>{f.a}</p>
+                    <p style={{ marginTop: '0.75rem', color: 'var(--land-text-muted)', fontSize: '0.95rem' }>>{f.a}</p>
                   )}
                 </div>
               </Reveal>
@@ -356,29 +356,29 @@ export default function Home() {
       </section>
 
       {/* ─── BOOKING ─── */}
-      <section id="booking" style={{ padding: '5rem 2rem' }}>
-        <div style={{ maxWidth: 700, margin: '0 auto' }}>
+      <section id="booking" style={{ padding: '5rem 2rem' }>>
+        <div style={{ maxWidth: 700, margin: '0 auto' }>>
           <Reveal>
-            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }>>
               <span className="land-badge">Book a Visit</span>
-              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }}>Schedule Your Free Consultation</h2>
-              <p style={{ color: 'var(--land-text-muted)', maxWidth: 500, margin: '1rem auto 0' }}>
+              <h2 className="heading" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '0.75rem' }>>Schedule Your Free Consultation</h2>
+              <p style={{ color: 'var(--land-text-muted)', maxWidth: 500, margin: '1rem auto 0' }>>
                 Tell us about your outdoor space and we will arrange a complimentary on-site walkthrough within 48 hours.
               </p>
             </div>
           </Reveal>
           <Reveal>
-            <form className="land-card" style={{ padding: '2.5rem' }} onSubmit={e => e.preventDefault()}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+            <form className="land-card" style={{ padding: '2.5rem' }> onSubmit={e => e.preventDefault()}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }>>
                 <input className="land-input" placeholder="First Name" />
                 <input className="land-input" placeholder="Last Name" />
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }>>
                 <input className="land-input" placeholder="Email Address" type="email" />
                 <input className="land-input" placeholder="Phone Number" type="tel" />
               </div>
-              <input className="land-input" placeholder="Property Address" style={{ marginBottom: '1rem' }} />
-              <select className="land-input" style={{ marginBottom: '1rem' }}>
+              <input className="land-input" placeholder="Property Address" style={{ marginBottom: '1rem' }> />
+              <select className="land-input" style={{ marginBottom: '1rem' }>>
                 <option value="">Select Service Interest</option>
                 <option>Landscape Design</option>
                 <option>Hardscaping</option>
@@ -387,27 +387,27 @@ export default function Home() {
                 <option>Outdoor Living</option>
                 <option>Full Redesign</option>
               </select>
-              <textarea className="land-input" placeholder="Describe your project and goals..." rows={4} style={{ marginBottom: '1rem', borderRadius: 'var(--land-radius)' }} />
-              <button type="submit" className="land-btn" style={{ width: '100%', textAlign: 'center' }}>Request Free Consultation</button>
-              <p style={{ textAlign: 'center', fontSize: '0.82rem', color: 'var(--land-text-muted)', marginTop: '1rem' }}>We respond within one business day. No obligation.</p>
+              <textarea className="land-input" placeholder="Describe your project and goals..." rows={4} style={{ marginBottom: '1rem', borderRadius: 'var(--land-radius)' }> />
+              <button type="submit" className="land-btn" style={{ width: '100%', textAlign: 'center' }>>Request Free Consultation</button>
+              <p style={{ textAlign: 'center', fontSize: '0.82rem', color: 'var(--land-text-muted)', marginTop: '1rem' }>>We respond within one business day. No obligation.</p>
             </form>
           </Reveal>
         </div>
       </section>
 
       {/* ─── CONTACT STRIP ─── */}
-      <section id="contact" style={{ padding: '4rem 2rem', background: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '2rem', textAlign: 'center' }}>
+      <section id="contact" style={{ padding: '4rem 2rem', background: 'white' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '2rem', textAlign: 'center' }>>
           {[
             { icon: '📍', label: 'Visit Us', val: '245 Garden Lane, Portland, OR 97201' },
             { icon: '📞', label: 'Call Us', val: '(503) 555-0178' },
             { icon: '✉️', label: 'Email Us', val: 'hello@verdantstudio.com' },
             { icon: '🕐', label: 'Hours', val: 'Mon–Sat 7 AM – 6 PM' },
           ].map(c => (
-            <div key={c.label}>
-              <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{c.icon}</div>
-              <div style={{ fontWeight: 700, marginBottom: '0.25rem', color: 'var(--land-forest)' }}>{c.label}</div>
-              <div style={{ color: 'var(--land-text-muted)', fontSize: '0.92rem' }}>{c.val}</div>
+            <div key={c.label>>
+              <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }>>{c.icon}</div>
+              <div style={{ fontWeight: 700, marginBottom: '0.25rem', color: 'var(--land-forest)' }>>{c.label}</div>
+              <div style={{ color: 'var(--land-text-muted)', fontSize: '0.92rem' }>>{c.val}</div>
             </div>
           ))}
         </div>
@@ -418,44 +418,44 @@ export default function Home() {
       <section className="section reveal" style={{  background: 'linear-gradient(135deg, #16a34a, #16a34add)',
         color: 'white',
         textAlign: 'center'
-       }}>
+       }>>
         <div className="container">
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem'  }>>
             Ready to Transform Your Business?
           </h2>
           <p style={{ fontSize: '1.25rem', 
             opacity: 0.9,
             maxWidth: '600px',
             margin: '0 auto 2.5rem'
-           }}>
+           }>>
             Join hundreds of satisfied clients who have achieved remarkable results with our landscaping solutions.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'  }}>
-            <button className="btn-primary btn-lg" style={{  background: 'white', color: '#16a34a'  }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'  }>>
+            <button className="btn-primary btn-lg" style={{  background: 'white', color: '#16a34a'  }>>
               Start Your Project Today
             </button>
-            <button className="btn-secondary btn-lg" style={{ borderColor: 'white', color: 'white'  }}>
+            <button className="btn-secondary btn-lg" style={{ borderColor: 'white', color: 'white'  }>>
               Schedule a Call
             </button>
           </div>
         </div>
       </section>
 
-<footer style={{ padding: '3rem 2rem 2rem', borderTop: '1px solid var(--land-border)', textAlign: 'center' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <span style={{ fontSize: '1.4rem' }}>🌿</span>
-            <span className="heading" style={{ fontSize: '1.2rem', fontWeight: 600 }}>Verdant Studio</span>
+<footer style={{ padding: '3rem 2rem 2rem', borderTop: '1px solid var(--land-border)', textAlign: 'center' }>>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }>>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }>>
+            <span style={{ fontSize: '1.4rem' }>>🌿</span>
+            <span className="heading" style={{ fontSize: '1.2rem', fontWeight: 600 }>>Verdant Studio</span>
           </div>
-          <p style={{ fontSize: '0.85rem', color: 'var(--land-text-muted)', marginBottom: '1.5rem' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--land-text-muted)', marginBottom: '1.5rem' }>>
             Award-winning landscape architecture and garden care since 1999.
           </p>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '1.5rem', flexWrap: 'wrap' }>>
             {NAV_LINKS.map(l => (
-              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link" style={{ fontSize: '0.82rem' }}>{l}</a>
+              <a key={l} href={`#${l.toLowerCase(})}`} className="land-nav-link" style={{ fontSize: '0.82rem' }>>{l}</a>
             ))}
           </div>
-          <p style={{ fontSize: '0.75rem', color: 'var(--land-text-muted)' }}>&copy; 2026 Verdant Studio. All rights reserved.</p>
+          <p style={{ fontSize: '0.75rem', color: 'var(--land-text-muted)' }>>&copy; 2026 Verdant Studio. All rights reserved.</p>
         </div>
       </footer>
     </div>
