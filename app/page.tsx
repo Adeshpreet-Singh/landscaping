@@ -148,6 +148,55 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section reveal">
+        <div className="container">
+          <h2 className="text-center" style={ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }>
+            Meet Our Team
+          </h2>
+          <p className="text-center" style={ 
+            color: 'var(--text-secondary)', 
+            maxWidth: '700px', 
+            margin: '0 auto 3rem',
+            fontSize: '1.125rem'
+          }>
+            Our talented team of professionals brings diverse expertise and passion to every project.
+          </p>
+          <div style={ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }>
+            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" 
+                   alt="Team member" 
+                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
+              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>John Smith</h3>
+              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>CEO & Founder</p>
+              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                15+ years of industry experience leading successful projects.
+              </p>
+            </div>
+            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" 
+                   alt="Team member" 
+                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
+              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>Sarah Johnson</h3>
+              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>Creative Director</p>
+              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                Award-winning designer with a passion for innovative solutions.
+              </p>
+            </div>
+            <div className="card hover-lift" style={ textAlign: 'center', padding: '2rem' }>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" 
+                   alt="Team member" 
+                   style={ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto 1rem' } />
+              <h3 style={ fontSize: '1.25rem', fontWeight: 'bold' }>Michael Chen</h3>
+              <p style={ color: '#16a34a', fontWeight: '600', marginBottom: '0.5rem' }>Technical Lead</p>
+              <p style={ color: 'var(--text-secondary)', fontSize: '0.9375rem' }>
+                Expert in modern technologies and scalable architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* ─── SERVICES ─── */}
       <section id="services" style={{ padding: '5rem 2rem', background: 'white' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -366,7 +415,36 @@ export default function Home() {
       </section>
 
       {/* ─── FOOTER ─── */}
-      <footer style={{ padding: '3rem 2rem 2rem', borderTop: '1px solid var(--land-border)', textAlign: 'center' }}>
+      
+      <section className="section reveal" style={ 
+        background: `linear-gradient(135deg, #16a34a, #16a34add)`,
+        color: 'white',
+        textAlign: 'center'
+      }>
+        <div className="container">
+          <h2 style={ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }>
+            Ready to Transform Your Business?
+          </h2>
+          <p style={ 
+            fontSize: '1.25rem', 
+            opacity: 0.9,
+            maxWidth: '600px',
+            margin: '0 auto 2.5rem'
+          }>
+            Join hundreds of satisfied clients who have achieved remarkable results with our landscaping solutions.
+          </p>
+          <div style={ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }>
+            <button className="btn-primary btn-lg" style={ background: 'white', color: '#16a34a' }>
+              Start Your Project Today
+            </button>
+            <button className="btn-secondary btn-lg" style={ borderColor: 'white', color: 'white' }>
+              Schedule a Call
+            </button>
+          </div>
+        </div>
+      </section>
+
+<footer style={{ padding: '3rem 2rem 2rem', borderTop: '1px solid var(--land-border)', textAlign: 'center' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
             <span style={{ fontSize: '1.4rem' }}>🌿</span>
