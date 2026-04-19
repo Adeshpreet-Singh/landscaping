@@ -325,11 +325,6 @@ section {
   position: relative;
 }
 
-p, li, span, td, label, dd {
-  font-size: max(14px, inherit);
-  line-height: 1.7;
-}
-
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -357,10 +352,6 @@ p, li, span, td, label, dd {
 
 /* CONTRAST FIX - ensure ALL body text meets WCAG AAA (7:1 ratio) */
 body { -webkit-font-smoothing: antialiased; }
-p, li, span:not(.badge):not(.btn):not(.btn-primary):not(.btn-outline), td, label, dd, a {
-  color: inherit;
-  line-height: 1.75;
-}
 
 /* FORCE readable text on ALL backgrounds */
 section p, section li, section span {
@@ -375,12 +366,8 @@ nav button, nav a, nav li {
 }
 
 /* CARDS - consistent, polished */
-.card, [class*="-card"] {
+.land-card {
   backdrop-filter: blur(12px);
-  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.card:hover, [class*="-card"]:hover {
-  transform: translateY(-6px);
 }
 
 /* FORMS - always visible inputs */
@@ -393,11 +380,11 @@ input, textarea, select {
 }
 
 /* BUTTONS - polished */
-button, .btn, [class*="btn-"] {
+button, .land-btn, .land-btn-outline {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-button:hover, .btn:hover, [class*="btn-"]:hover {
+button:hover, .land-btn:hover, .land-btn-outline:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
@@ -416,19 +403,13 @@ section {
 }
 
 /* SCROLL REVEAL */
-.reveal, [class*="reveal"] {
+.land-reveal {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* MINIMUM FONT SIZE - nothing below 14px */
-* { font-size: max(14px, inherit); }
-h1 { font-size: max(2.5rem, inherit); }
-h2 { font-size: max(2rem, inherit); }
-h3 { font-size: max(1.25rem, inherit); }
-
 /* FOCUS STATES */
 *:focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid var(--land-forest);
   outline-offset: 3px;
 }
 
@@ -438,7 +419,7 @@ h3 { font-size: max(1.25rem, inherit); }
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal { opacity: 1 !important; transform: none !important; }
+  .land-reveal { opacity: 1 !important; transform: none !important; }
 }
 
 /* MOBILE */
@@ -454,7 +435,7 @@ h3 { font-size: max(1.25rem, inherit); }
 
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--land-shadow-lg);
 }
 
 .hover-zoom {
@@ -486,7 +467,7 @@ h3 { font-size: max(1.25rem, inherit); }
   display: block;
   font-weight: 600;
   font-size: 0.875rem;
-  color: var(--text-primary);
+  color: var(--land-text);
   margin-bottom: 0.5rem;
 }
 
@@ -494,21 +475,21 @@ h3 { font-size: max(1.25rem, inherit); }
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 0.9375rem;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  transition: var(--transition);
+  border: 2px solid var(--land-border);
+  border-radius: var(--land-radius);
+  background: white;
+  color: var(--land-text);
+  transition: all 0.3s ease;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--land-forest);
+  box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
 }
 
 .form-input::placeholder {
-  color: var(--text-muted);
+  color: var(--land-text-muted);
 }
 
 .form-textarea {
@@ -551,4 +532,48 @@ h3 { font-size: max(1.25rem, inherit); }
 
 .container-lg {
   max-width: 1400px;
+}
+
+
+/* Typography hierarchy */
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; letter-spacing: -0.02em; }
+
+/* Contrast */
+body, p, li, td, span { color: var(--land-text); }
+h1, h2, h3, h4, h5, h6 { color: var(--land-text); }
+
+/* Section spacing */
+section, .section, [class*="section"] {
+  padding-top: clamp(3rem, 8vw, 6rem);
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+header, footer, nav {
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+}
+
+/* Buttons */
+button, [class*="btn"], [class*="button"], [class*="cta"] {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Forms */
+input, textarea, select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--land-border);
+  border-radius: var(--land-radius);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section { padding-top: 2rem; padding-bottom: 2rem; }
 }
