@@ -132,10 +132,10 @@ export default function Home() {
  <button onClick={() => scrollToSection('contact')} className="land-btn">Get Free Estimate</button>
  <button onClick={() => scrollToSection('services')} className="land-btn-outline">View Services</button>
  </div>
- <div className="flex items-center gap-6 flex-wrap">
- <span>✓</span> Licensed &amp; Insured
- <span>✓</span> 5-Year Warranty
- </div>
+        <div className="flex items-center gap-6 flex-wrap text-sm font-medium">
+          <span className="flex items-center gap-2"><span aria-hidden="true">✓</span> Licensed &amp; Insured</span>
+          <span className="flex items-center gap-2"><span aria-hidden="true">✓</span> 5-Year Warranty</span>
+        </div>
  </div>
  <div className="relative flex items-center justify-center">
  <div className="absolute" aria-hidden="true" />
@@ -158,7 +158,7 @@ export default function Home() {
  <span className="land-badge mb-3 inline-block">Our Services</span>
  <h2 id="services-heading" className="heading">Rooted in excellence</h2>
  </div>
- <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
  {SERVICES.map((s, i) => (
  <div key={i} className="land-card land-reveal">
  <div className="land-icon-circle mb-4">{s.icon}</div>
@@ -224,7 +224,7 @@ export default function Home() {
  <span className="land-badge mb-3 inline-block">Our Process</span>
  <h2 id="process-heading" className="heading">From vision to reality</h2>
  </div>
- <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
  {STEPS.map((step, i) => (
  <div key={i} className="land-card land-reveal relative">
  {i < STEPS.length - 1 && (
@@ -247,7 +247,7 @@ export default function Home() {
  <span className="land-badge mb-3 inline-block">Client Stories</span>
  <h2 id="stories-heading" className="heading">Landscapes that speak</h2>
  </div>
- <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
  {TESTIMONIALS.map((t, i) => (
  <div key={i} className="land-card land-reveal">
  <div>{t.savings}</div>
@@ -361,24 +361,24 @@ export default function Home() {
  <input type="hidden" name="subject" value="New Free Estimate Request — Verdant Landscapes" />
  <input type="checkbox" name="botcheck" className="hidden" />
 
- <div className="grid md:grid-cols-2 gap-4">
- <div>
- <label htmlFor="name">Full Name</label>
- <input id="name" name="name" type="text" required placeholder="Jane Smith" className="land-input" />
- </div>
- <div>
- <label htmlFor="email">Email</label>
- <input id="email" name="email" type="email" required placeholder="jane@example.com" className="land-input" />
- </div>
- </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-semibold mb-1.5">Full Name</label>
+              <input id="name" name="name" type="text" required placeholder="Jane Smith" className="land-input" />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-semibold mb-1.5">Email</label>
+              <input id="email" name="email" type="email" required placeholder="jane@example.com" className="land-input" />
+            </div>
+          </div>
 
- <div className="grid md:grid-cols-2 gap-4">
- <div>
- <label htmlFor="phone">Phone</label>
- <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000" className="land-input" />
- </div>
- <div>
- <label htmlFor="service">Service Needed</label>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="phone" className="block text-sm font-semibold mb-1.5">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000" className="land-input" />
+            </div>
+            <div>
+              <label htmlFor="service" className="block text-sm font-semibold mb-1.5">Service Needed</label>
  <select id="service" name="service" className="land-input">
  <option value="">Select a service</option>
  <option value="design">Landscape Design</option>
@@ -391,8 +391,8 @@ export default function Home() {
  </div>
  </div>
 
- <div>
- <label htmlFor="message">Project Details</label>
+          <div>
+            <label htmlFor="message" className="block text-sm font-semibold mb-1.5">Project Details</label>
  <textarea id="message" name="message" rows={4} placeholder="Describe your outdoor space and vision..." className="land-input" />
  </div>
 

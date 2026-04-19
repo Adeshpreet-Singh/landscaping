@@ -14,9 +14,9 @@
   --land-sage: #7a9e6e;
   --land-fern: #4a7a3e;
   --land-bark: #5c4a2a;
-  --land-text: #2e2818;
-  --land-text-muted: #5a4f3a;
-  --land-border: #d8c8a8;
+  --land-text: #1a1608;
+  --land-text-muted: #3d3624;
+  --land-border: #c8b890;
   --land-radius: 12px;
   --land-radius-lg: 18px;
   --land-shadow: 0 5px 20px rgba(46, 40, 24, 0.07);
@@ -346,6 +346,103 @@ section {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+
+  /* Minimum 44px touch targets on mobile */
+  .land-nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem;
+  }
+
+  .land-btn, .land-btn-outline {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Better mobile typography */
+  body {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  h2.heading, .heading {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Better mobile card spacing */
+  .land-card {
+    padding: 1.5rem;
+  }
+
+  /* Navigation mobile improvements */
+  .land-nav {
+    padding: 0;
+  }
+
+  nav button, nav a {
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+
+  /* Footer links accessible on mobile */
+  footer button, footer a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  /* Form inputs bigger on mobile */
+  .land-input {
+    font-size: 16px !important;
+    padding: 0.85rem 1rem !important;
+    min-height: 48px;
+  }
+
+  /* Gallery buttons */
+  .land-card .land-btn {
+    width: 100%;
+  }
+
+  /* Icon circles more visible */
+  .land-icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem;
+  }
+
+  /* Hero text bigger */
+  .land-hero .heading {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.15;
+  }
+
+  /* Badge readable */
+  .land-badge {
+    font-size: 0.75rem;
+  }
 }
 
 /* ===== FINAL 10/10 POLISH ===== */
@@ -425,7 +522,8 @@ section {
 /* MOBILE */
 @media (max-width: 768px) {
   section { padding-left: 1rem !important; padding-right: 1rem !important; }
-  nav button, nav a { font-size: 14px !important; }
+  nav button, nav a { font-size: 16px !important; min-height: 44px; }
+  nav .land-nav-link { font-size: 1rem !important; }
 }
 
 /* Hover effects */
