@@ -2,31 +2,33 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Verdant Landscapes | Expert Design, Installation & Maintenance",
+  title: "Terraverde | Portland's Premier Landscape Atelier",
   description:
-    "Transform your outdoor space with Verdant Landscapes. Expert landscape design, installation, maintenance, hardscaping, lighting, and irrigation services. Free estimates. Serving the Greater Portland area since 2005.",
+    "Terraverde composes living environments — bespoke landscape design, master installation, artisan hardscaping, atmospheric lighting, and white-glove maintenance. Serving Greater Portland since 2005.",
   keywords: [
     "landscaping",
     "landscape design",
-    "lawn maintenance",
+    "landscape architecture",
     "hardscaping",
     "patio installation",
     "outdoor lighting",
-    "irrigation",
+    "premium landscaping",
     "Portland landscaper",
+    "outdoor living",
+    "garden design",
   ],
   openGraph: {
-    title: "Verdant Landscapes | Expert Design, Installation & Maintenance",
+    title: "Terraverde | Portland's Premier Landscape Atelier",
     description:
-      "Transform your outdoor space. Expert design, installation, maintenance, hardscaping, and irrigation. Free estimates.",
-    url: "https://verdantlandscapes.com",
-    siteName: "Verdant Landscapes",
+      "Bespoke landscape design, master installation, and artisan hardscaping. Composing living environments since 2005.",
+    url: "https://terraverde.com",
+    siteName: "Terraverde Landscape Atelier",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&q=80",
+        url: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&q=85",
         width: 1200,
         height: 630,
-        alt: "Beautiful landscaped garden by Verdant Landscapes",
+        alt: "Lush garden pathway with native plantings by Terraverde",
       },
     ],
     locale: "en_US",
@@ -34,11 +36,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Verdant Landscapes | Expert Design, Installation & Maintenance",
+    title: "Terraverde | Portland's Premier Landscape Atelier",
     description:
-      "Transform your outdoor space. Expert design, installation, maintenance, hardscaping, and irrigation. Free estimates.",
+      "Bespoke landscape design, master installation, and artisan hardscaping. Composing living environments since 2005.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&q=85",
     ],
   },
   robots: { index: true, follow: true },
@@ -50,13 +52,13 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LandscapingBusiness",
-    name: "Verdant Landscapes",
+    name: "Terraverde Landscape Atelier",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
-    "@id": "https://verdantlandscapes.com",
-    url: "https://verdantlandscapes.com",
-    telephone: "+15035551234",
-    email: "hello@verdantlandscapes.com",
+    "@id": "https://terraverde.com",
+    url: "https://terraverde.com",
+    telephone: "+150****1234",
+    email: "hello@terraverde.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1234 Garden Way",
@@ -84,16 +86,16 @@ export default function RootLayout({
         closes: "14:00",
       },
     ],
-    priceRange: "$$",
+    priceRange: "$$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
       reviewCount: "247",
     },
     sameAs: [
-      "https://www.facebook.com/verdantlandscapes",
-      "https://www.instagram.com/verdantlandscapes",
-      "https://www.pinterest.com/verdantlandscapes",
+      "https://www.facebook.com/terraverdelandscapes",
+      "https://www.instagram.com/terraverdelandscapes",
+      "https://www.pinterest.com/terraverdelandscapes",
     ],
   };
 

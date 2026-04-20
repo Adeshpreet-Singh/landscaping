@@ -1,27 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
 :root {
-  --land-cream: #faf5eb;
-  --land-cream-earth: #f2e8d2;
-  --land-forest: #228B22;
-  --land-forest-deep: #1a6b1a;
-  --land-forest-dark: #0f4f0f;
-  --land-brown: #8b6914;
-  --land-brown-dark: #6b5010;
-  --land-terra: #c4704b;
+  /* ─── Core Palette ─── */
+  --land-cream: #f7f3eb;
+  --land-cream-warm: #f0e8d8;
+  --land-cream-earth: #e8dcc8;
+  --land-forest: #2d5a27;
+  --land-forest-deep: #1e3f1a;
+  --land-forest-dark: #132a11;
   --land-sage: #7a9e6e;
+  --land-sage-light: #a3c496;
   --land-fern: #4a7a3e;
+  --land-moss: #3d6b35;
+
+  /* ─── Earth Tones ─── */
   --land-bark: #5c4a2a;
+  --land-bark-light: #8b7452;
+  --land-terra: #b8734a;
+  --land-terra-warm: #c4845a;
+  --land-stone: #9e9484;
+  --land-clay: #b8a48c;
+
+  /* ─── Neutrals ─── */
   --land-text: #1a1608;
-  --land-text-muted: #3d3624;
-  --land-border: #c8b890;
+  --land-text-muted: #4a4232;
+  --land-border: #d4c8a8;
+  --land-border-light: #e6dece;
+
+  /* ─── Radii ─── */
   --land-radius: 12px;
-  --land-radius-lg: 18px;
-  --land-shadow: 0 5px 20px rgba(46, 40, 24, 0.07);
-  --land-shadow-lg: 0 14px 44px rgba(46, 40, 24, 0.11);
+  --land-radius-lg: 20px;
+  --land-radius-xl: 28px;
+
+  /* ─── Shadows ─── */
+  --land-shadow: 0 4px 16px rgba(42, 36, 20, 0.06);
+  --land-shadow-md: 0 8px 30px rgba(42, 36, 20, 0.08);
+  --land-shadow-lg: 0 16px 50px rgba(42, 36, 20, 0.12);
+  --land-shadow-xl: 0 24px 60px rgba(42, 36, 20, 0.16);
 }
+
+/* ═══════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════ */
 
 html {
   scroll-behavior: smooth;
@@ -30,15 +52,15 @@ html {
 body {
   background: var(--land-cream);
   color: var(--land-text);
-  font-family: 'Karla', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6, .heading {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: -0.015em;
-  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   color: var(--land-text);
 }
 
@@ -46,16 +68,228 @@ p, li, span, td, label, dd {
   line-height: 1.75;
 }
 
-/* ─── Cards ─── */
+::selection {
+  background: rgba(45, 90, 39, 0.12);
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+/* ═══════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════ */
+
+.land-nav {
+  background: rgba(247, 243, 235, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--land-border-light);
+  transition: all 0.3s ease;
+}
+
+.land-nav-link {
+  color: var(--land-text-muted);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.land-nav-link:hover {
+  color: var(--land-forest);
+}
+
+.land-logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--land-forest), var(--land-moss));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--land-cream);
+  box-shadow: 0 3px 12px rgba(45, 90, 39, 0.2);
+}
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
+
+.land-btn {
+  background: var(--land-forest);
+  color: var(--land-cream);
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(45, 90, 39, 0.2);
+}
+
+.land-btn:hover {
+  background: var(--land-forest-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(45, 90, 39, 0.3);
+}
+
+.land-btn:active {
+  transform: scale(0.97);
+}
+
+.land-btn-outline {
+  border: 2px solid var(--land-forest);
+  color: var(--land-forest);
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+}
+
+.land-btn-outline:hover {
+  background: var(--land-forest);
+  color: var(--land-cream);
+  box-shadow: 0 4px 18px rgba(45, 90, 39, 0.2);
+  transform: translateY(-2px);
+}
+
+.land-btn-white {
+  background: white;
+  color: var(--land-forest);
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.land-btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.land-btn-outline-white {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+}
+
+.land-btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+
+.land-hero {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(122, 158, 110, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 115, 74, 0.05) 0%, transparent 50%),
+    linear-gradient(160deg, var(--land-cream-earth) 0%, var(--land-cream) 40%, var(--land-cream-warm) 100%);
+}
+
+.land-hero-heading {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 1.08;
+}
+
+.land-accent {
+  color: var(--land-forest);
+  font-style: italic;
+}
+
+.land-hero-img-wrap {
+  border-radius: var(--land-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--land-shadow-xl);
+  position: relative;
+}
+
+.land-hero-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(26, 22, 8, 0.15) 100%);
+  pointer-events: none;
+}
+
+.land-hero-stat {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  background: white;
+  border: 1.5px solid var(--land-border-light);
+  border-radius: var(--land-radius-lg);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--land-shadow-md);
+  z-index: 2;
+}
+
+.land-deco-ring {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 90, 39, 0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════════ */
+
 .land-card {
   background: white;
-  border: 1.5px solid var(--land-border);
+  border: 1.5px solid var(--land-border-light);
   border-radius: var(--land-radius-lg);
   padding: 2rem;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--land-shadow);
 }
 
 .land-card > *:last-child {
@@ -76,101 +310,342 @@ p, li, span, td, label, dd {
 
 .land-card:hover {
   box-shadow: var(--land-shadow-lg);
-  transform: translateY(-5px);
-  border-color: var(--land-sage);
+  transform: translateY(-4px);
+  border-color: var(--land-sage-light);
 }
 
 .land-card:hover::before {
   opacity: 1;
 }
 
-/* Staggered card animation delays */
-.land-card:nth-child(1) { transition-delay: 0ms; }
-.land-card:nth-child(2) { transition-delay: 80ms; }
-.land-card:nth-child(3) { transition-delay: 160ms; }
-.land-card:nth-child(4) { transition-delay: 240ms; }
-.land-card:nth-child(5) { transition-delay: 320ms; }
-.land-card:nth-child(6) { transition-delay: 400ms; }
+/* ═══════════════════════════════════════════
+   SERVICE CARDS
+   ═══════════════════════════════════════════ */
 
-/* ─── Buttons ─── */
-.land-btn {
-  background: var(--land-forest);
-  color: var(--land-cream);
-  padding: 0.85rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  font-family: 'Karla', sans-serif;
-  letter-spacing: 0.03em;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(34, 139, 34, 0.22);
-}
-
-.land-btn:hover {
-  background: var(--land-forest-deep);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(34, 139, 34, 0.32);
-}
-
-.land-btn:active {
-  transform: scale(0.97);
-}
-
-.land-btn-outline {
-  border: 2px solid var(--land-forest);
-  color: var(--land-forest);
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  font-family: 'Karla', sans-serif;
-  transition: all 0.35s ease;
-  display: inline-block;
-  background: transparent;
-  cursor: pointer;
-}
-
-.land-btn-outline:hover {
-  background: var(--land-forest);
-  color: var(--land-cream);
-  box-shadow: 0 4px 14px rgba(34, 139, 34, 0.22);
-}
-
-/* ─── Hero ─── */
-.land-hero {
-  background: linear-gradient(140deg, var(--land-cream-earth) 0%, var(--land-cream) 55%, #f5efe0 100%);
-}
-
-/* ─── Alt section ─── */
-.land-section-alt {
+.land-service-card {
   background: white;
+  border: 1.5px solid var(--land-border-light);
+  border-radius: var(--land-radius-lg);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
 }
 
-/* ─── Badge ─── */
-.land-badge {
-  display: inline-block;
-  padding: 0.3rem 0.9rem;
+.land-service-card:hover {
+  box-shadow: var(--land-shadow-lg);
+  transform: translateY(-6px);
+  border-color: var(--land-sage-light);
+}
+
+.land-service-img-wrap {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.land-service-img-wrap img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.land-service-card:hover .land-service-img-wrap img {
+  transform: scale(1.08);
+}
+
+.land-service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(26, 22, 8, 0.06) 100%);
+  pointer-events: none;
+}
+
+.land-service-body {
+  padding: 1.5rem;
+}
+
+/* ═══════════════════════════════════════════
+   BEFORE / AFTER SLIDER
+   ═══════════════════════════════════════════ */
+
+.land-ba-card {
+  background: white;
+  border: 1.5px solid var(--land-border-light);
+  border-radius: var(--land-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--land-shadow-md);
+}
+
+.land-ba-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+}
+
+.land-ba-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.land-ba-before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.land-ba-before img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.land-ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  z-index: 3;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+}
+
+.land-ba-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: white;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.land-ba-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  color: var(--land-forest);
+}
+
+.land-ba-label {
+  position: absolute;
+  top: 16px;
+  padding: 0.35rem 1rem;
   border-radius: 50px;
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(34, 139, 34, 0.08);
-  color: var(--land-forest);
-  font-family: 'Karla', sans-serif;
+  letter-spacing: 0.12em;
+  z-index: 2;
+  font-family: 'DM Sans', sans-serif;
 }
 
-/* ─── Form inputs ─── */
+.land-ba-label-before {
+  left: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.land-ba-label-after {
+  right: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--land-forest);
+  backdrop-filter: blur(4px);
+}
+
+.land-ba-info {
+  padding: 1.5rem 2rem;
+}
+
+/* Thumbnail strip */
+.land-ba-thumb {
+  position: relative;
+  border-radius: var(--land-radius);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 2px solid var(--land-border-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: none;
+  padding: 0;
+}
+
+.land-ba-thumb:hover {
+  border-color: var(--land-sage);
+  transform: translateY(-2px);
+  box-shadow: var(--land-shadow);
+}
+
+.land-ba-thumb.active {
+  border-color: var(--land-forest);
+  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.15);
+}
+
+.land-ba-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.land-ba-thumb-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════
+   PROCESS CARDS
+   ═══════════════════════════════════════════ */
+
+.land-process-card {
+  background: white;
+  border: 1.5px solid var(--land-border-light);
+  border-radius: var(--land-radius-lg);
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+
+.land-process-card:hover {
+  box-shadow: var(--land-shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--land-sage-light);
+}
+
+.land-process-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--land-sage-light);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.land-process-connector {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .land-process-connector {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    right: -2rem;
+    width: 4rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--land-sage-light), transparent);
+    z-index: 1;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   TESTIMONIAL CARDS
+   ═══════════════════════════════════════════ */
+
+.land-testimonial-card {
+  background: white;
+  border: 1.5px solid var(--land-border-light);
+  border-radius: var(--land-radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  box-shadow: var(--land-shadow);
+}
+
+.land-testimonial-card:hover {
+  box-shadow: var(--land-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.land-testimonial-metric {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: rgba(45, 90, 39, 0.06);
+  color: var(--land-forest);
+}
+
+/* ═══════════════════════════════════════════
+   BADGE
+   ═══════════════════════════════════════════ */
+
+.land-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(45, 90, 39, 0.06);
+  color: var(--land-forest);
+  font-family: 'DM Sans', sans-serif;
+  border: 1px solid rgba(45, 90, 39, 0.08);
+}
+
+/* ═══════════════════════════════════════════
+   ICON CIRCLE
+   ═══════════════════════════════════════════ */
+
+.land-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(45, 90, 39, 0.06), rgba(122, 158, 110, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.land-icon-circle:hover {
+  background: linear-gradient(135deg, rgba(45, 90, 39, 0.12), rgba(122, 158, 110, 0.18));
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════════
+   FORMS
+   ═══════════════════════════════════════════ */
+
 .land-input {
-  background: white !important;
+  background: var(--land-cream) !important;
   border: 1.5px solid var(--land-border) !important;
   color: var(--land-text) !important;
   padding: 0.9rem 1.25rem;
   border-radius: var(--land-radius);
-  font-family: 'Karla', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   transition: all 0.3s ease;
   width: 100%;
@@ -179,26 +654,65 @@ p, li, span, td, label, dd {
 .land-input:focus {
   border-color: var(--land-forest) !important;
   outline: none;
-  box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.1);
+  box-shadow: 0 0 0 4px rgba(45, 90, 39, 0.08);
+  background: white !important;
 }
 
 .land-input::placeholder {
-  color: rgba(46, 40, 24, 0.55) !important;
+  color: rgba(46, 40, 24, 0.45) !important;
 }
 
-/* ─── Image wraps ─── */
+/* ═══════════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════════ */
+
+.land-section-alt {
+  background: white;
+}
+
+.land-cta-banner {
+  background:
+    linear-gradient(135deg, var(--land-forest-dark) 0%, var(--land-forest) 50%, var(--land-moss) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.land-cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+
+.land-footer {
+  background: var(--land-cream-earth);
+  border-top: 1px solid var(--land-border);
+}
+
+/* ═══════════════════════════════════════════
+   IMAGE WRAPS
+   ═══════════════════════════════════════════ */
+
 .land-img-wrap {
   overflow: hidden;
   border-radius: var(--land-radius-lg);
 }
 
-.land-img-wrap img {
+.land-img-wrap img,
+.land-img-wrap iframe {
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 0;
 }
 
-.land-img-wrap:hover img {
-  transform: scale(1.06);
+.land-img-wrap:hover img,
+.land-img-wrap:hover iframe {
+  transform: scale(1.03);
 }
 
 img {
@@ -208,13 +722,16 @@ img {
   border-radius: 8px;
 }
 
-/* ─── Scroll reveal ─── */
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════ */
+
 .land-reveal {
   opacity: 0;
   transform: translateY(30px);
   transition:
-    opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .land-reveal.visible {
@@ -222,76 +739,10 @@ img {
   transform: translateY(0);
 }
 
-/* ─── Navigation ─── */
-.land-nav {
-  background: rgba(250, 245, 235, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--land-border);
-}
+/* ═══════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════ */
 
-.land-nav-link {
-  color: var(--land-text-muted);
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-family: 'Karla', sans-serif;
-}
-
-.land-nav-link:hover {
-  color: var(--land-forest);
-}
-
-/* ─── Icon circle ─── */
-.land-icon-circle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(34, 139, 34, 0.08), rgba(122, 158, 110, 0.12));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-/* ─── Decorative ─── */
-.land-tree-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(34, 139, 34, 0.04);
-  pointer-events: none;
-}
-
-.land-ground-texture {
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(122, 158, 110, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 105, 20, 0.03) 0%, transparent 50%);
-}
-
-/* ─── FAQ ─── */
-.land-faq-item {
-  background: white;
-  border: 1.5px solid var(--land-border);
-  border-radius: var(--land-radius);
-  padding: 1.25rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.land-faq-item:hover {
-  box-shadow: var(--land-shadow);
-  border-color: var(--land-sage);
-}
-
-/* ─── Selection ─── */
-::selection {
-  background: rgba(34, 139, 34, 0.12);
-}
-
-/* ─── Scrollbar ─── */
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -309,23 +760,19 @@ img {
   background: var(--land-sage);
 }
 
-/* ─── Focus ─── */
+/* ═══════════════════════════════════════════
+   FOCUS
+   ═══════════════════════════════════════════ */
+
 *:focus-visible {
   outline: 2px solid var(--land-forest);
   outline-offset: 3px;
 }
 
-/* ─── Utility ─── */
-button {
-  cursor: pointer;
-}
+/* ═══════════════════════════════════════════
+   ACCESSIBILITY
+   ═══════════════════════════════════════════ */
 
-section {
-  overflow: hidden;
-  position: relative;
-}
-
-/* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -340,14 +787,16 @@ section {
   }
 }
 
-/* ─── Mobile ─── */
+/* ═══════════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════════ */
+
 @media (max-width: 768px) {
   section {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 
-  /* Minimum 44px touch targets on mobile */
   .land-nav-link {
     min-height: 44px;
     display: flex;
@@ -356,23 +805,23 @@ section {
     padding: 0.75rem 1rem;
   }
 
-  .land-btn, .land-btn-outline {
+  .land-btn, .land-btn-outline, .land-btn-white, .land-btn-outline-white {
     min-height: 48px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.85rem 1.5rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
-  /* Better mobile typography */
   body {
     font-size: 17px;
     line-height: 1.7;
   }
 
-  h2.heading, .heading {
-    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  .land-hero-heading {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.1;
   }
 
   p {
@@ -380,7 +829,6 @@ section {
     line-height: 1.75;
   }
 
-  /* Prevent horizontal overflow */
   * {
     max-width: 100%;
     box-sizing: border-box;
@@ -391,14 +839,42 @@ section {
     width: 100%;
   }
 
-  /* Better mobile card spacing */
   .land-card {
     padding: 1.5rem;
   }
 
-  /* Navigation mobile improvements */
-  .land-nav {
-    padding: 0;
+  .land-service-img-wrap {
+    height: 140px;
+  }
+
+  .land-ba-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .land-hero-stat {
+    bottom: -15px;
+    right: 10px;
+    padding: 1rem;
+  }
+
+  .land-deco-ring {
+    display: none;
+  }
+
+  .land-icon-circle {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+
+  .land-badge {
+    font-size: 0.72rem;
+  }
+
+  .land-input {
+    font-size: 16px !important;
+    padding: 0.85rem 1rem !important;
+    min-height: 48px;
   }
 
   nav button, nav a {
@@ -406,68 +882,39 @@ section {
     min-height: 44px;
   }
 
-  /* Footer links accessible on mobile */
   footer button, footer a {
     min-height: 44px;
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
   }
-
-  /* Form inputs bigger on mobile */
-  .land-input {
-    font-size: 16px !important;
-    padding: 0.85rem 1rem !important;
-    min-height: 48px;
-  }
-
-  /* Gallery buttons */
-  .land-card .land-btn {
-    width: 100%;
-  }
-
-  /* Icon circles more visible */
-  .land-icon-circle {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
-  }
-
-  /* Hero text bigger */
-  .land-hero .heading {
-    font-size: clamp(2rem, 6vw, 2.75rem);
-    line-height: 1.15;
-  }
-
-  /* Badge readable */
-  .land-badge {
-    font-size: 0.75rem;
-  }
 }
 
-/* ===== FINAL 10/10 POLISH ===== */
+/* ═══════════════════════════════════════════
+   UTILITY
+   ═══════════════════════════════════════════ */
 
-/* CONTRAST FIX - ensure ALL body text meets WCAG AAA (7:1 ratio) */
-body { -webkit-font-smoothing: antialiased; }
+button {
+  cursor: pointer;
+}
 
-/* FORCE readable text on ALL backgrounds */
+/* Force readable text */
 section p, section li, section span {
   opacity: 1 !important;
 }
 
-/* NAV - always readable, never too small */
 nav button, nav a, nav li {
   font-size: 15px !important;
   font-weight: 500 !important;
   opacity: 1 !important;
 }
 
-/* CARDS - consistent, polished */
+/* Cards polish */
 .land-card {
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
 }
 
-/* FORMS - always visible inputs */
+/* Forms polish */
 input, textarea, select {
   font-size: 16px !important;
   padding: 14px 18px !important;
@@ -476,202 +923,47 @@ input, textarea, select {
   border-radius: 10px !important;
 }
 
-/* BUTTONS - polished */
+/* Buttons hover effects */
 button, .land-btn, .land-btn-outline {
   cursor: pointer;
   transition: all 0.25s ease;
 }
+
 button:hover, .land-btn:hover, .land-btn-outline:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
+  filter: brightness(1.02);
 }
 
-/* IMAGES - proper sizing */
+/* Images */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* SECTIONS - proper overflow */
 section {
   overflow: hidden;
   position: relative;
 }
 
-/* SCROLL REVEAL */
-.land-reveal {
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+/* Staggered card animation */
+.land-card:nth-child(1),
+.land-service-card:nth-child(1),
+.land-process-card:nth-child(1),
+.land-testimonial-card:nth-child(1) { transition-delay: 0ms; }
 
-/* FOCUS STATES */
-*:focus-visible {
-  outline: 2px solid var(--land-forest);
-  outline-offset: 3px;
-}
+.land-card:nth-child(2),
+.land-service-card:nth-child(2),
+.land-process-card:nth-child(2),
+.land-testimonial-card:nth-child(2) { transition-delay: 80ms; }
 
-/* REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-  .land-reveal { opacity: 1 !important; transform: none !important; }
-}
+.land-card:nth-child(3),
+.land-service-card:nth-child(3),
+.land-process-card:nth-child(3),
+.land-testimonial-card:nth-child(3) { transition-delay: 160ms; }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  section { padding-left: 1rem !important; padding-right: 1rem !important; }
-  nav button, nav a { font-size: 16px !important; min-height: 44px; }
-  nav .land-nav-link { font-size: 1rem !important; }
-}
+.land-card:nth-child(4),
+.land-service-card:nth-child(4),
+.land-process-card:nth-child(4) { transition-delay: 240ms; }
 
-/* Hover effects */
-.hover-lift {
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--land-shadow-lg);
-}
-
-.hover-zoom {
-  overflow: hidden;
-}
-
-.hover-zoom img {
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.hover-zoom:hover img {
-  transform: scale(1.08);
-}
-
-.hover-glow {
-  transition: box-shadow 0.3s ease;
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
-}
-
-/* Form styles */
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-label {
-  display: block;
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: var(--land-text);
-  margin-bottom: 0.5rem;
-}
-
-.form-input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 0.9375rem;
-  border: 2px solid var(--land-border);
-  border-radius: var(--land-radius);
-  background: white;
-  color: var(--land-text);
-  transition: all 0.3s ease;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--land-forest);
-  box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
-}
-
-.form-input::placeholder {
-  color: var(--land-text-muted);
-}
-
-.form-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.form-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-  background-position: right 0.75rem center;
-  background-repeat: no-repeat;
-  background-size: 1.5em 1.5em;
-  padding-right: 2.5rem;
-}
-
-/* Section styles */
-.section {
-  padding: 5rem 1rem;
-}
-
-.section-lg {
-  padding: 7rem 1rem;
-}
-
-.section-sm {
-  padding: 3rem 1rem;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.container-sm {
-  max-width: 640px;
-}
-
-.container-lg {
-  max-width: 1400px;
-}
-
-
-/* Typography hierarchy */
-h1, h2, h3, h4, h5, h6 { line-height: 1.2; letter-spacing: -0.02em; }
-
-/* Contrast */
-body, p, li, td, span { color: var(--land-text); }
-h1, h2, h3, h4, h5, h6 { color: var(--land-text); }
-
-/* Section spacing */
-section, .section, [class*="section"] {
-  padding-top: clamp(3rem, 8vw, 6rem);
-  padding-bottom: clamp(3rem, 8vw, 6rem);
-  padding-left: clamp(1rem, 4vw, 2rem);
-  padding-right: clamp(1rem, 4vw, 2rem);
-}
-header, footer, nav {
-  padding-left: clamp(1rem, 3vw, 2rem);
-  padding-right: clamp(1rem, 3vw, 2rem);
-}
-
-/* Buttons */
-button, [class*="btn"], [class*="button"], [class*="cta"] {
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-/* Forms */
-input, textarea, select {
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--land-border);
-  border-radius: var(--land-radius);
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  section { padding-top: 2rem; padding-bottom: 2rem; }
-}
+.land-card:nth-child(5),
+.land-service-card:nth-child(5) { transition-delay: 320ms; }
