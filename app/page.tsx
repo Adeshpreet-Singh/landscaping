@@ -320,7 +320,7 @@ export default function Home() {
         </section>
 
         {/* ─── SERVICES ─── */}
-        <section id="services" className="land-section-alt py-20 md:py-28" aria-labelledby="services-heading">
+        <section id="services" className="land-section-alt py-16 md:py-20" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">What We Do</span>
@@ -346,7 +346,7 @@ export default function Home() {
         </section>
 
         {/* ─── BEFORE/AFTER PORTFOLIO ─── */}
-        <section id="portfolio" className="py-20 md:py-28" aria-labelledby="portfolio-heading">
+        <section id="portfolio" className="py-16 md:py-20" aria-labelledby="portfolio-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Portfolio</span>
@@ -389,7 +389,7 @@ export default function Home() {
         </section>
 
         {/* ─── PROCESS ─── */}
-        <section id="process" className="land-section-alt py-20 md:py-28" aria-labelledby="process-heading">
+        <section id="process" className="land-section-alt py-16 md:py-20" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Our Approach</span>
@@ -413,7 +413,7 @@ export default function Home() {
         </section>
 
         {/* ─── TESTIMONIALS ─── */}
-        <section id="stories" className="py-20 md:py-28" aria-labelledby="stories-heading">
+        <section id="stories" className="py-16 md:py-20" aria-labelledby="stories-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Client Stories</span>
@@ -436,7 +436,7 @@ export default function Home() {
         </section>
 
         {/* ─── SERVICE AREA ─── */}
-        <section className="land-section-alt py-20 md:py-28" aria-labelledby="area-heading">
+        <section className="land-section-alt py-16 md:py-20" aria-labelledby="area-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="land-reveal">
@@ -470,7 +470,7 @@ export default function Home() {
         </section>
 
         {/* ─── CONTACT ─── */}
-        <section id="contact" className="py-20 md:py-28" aria-labelledby="contact-heading">
+        <section id="contact" className="py-16 md:py-20" aria-labelledby="contact-heading">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Begin Your Project</span>
