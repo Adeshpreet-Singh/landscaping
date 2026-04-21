@@ -471,7 +471,7 @@ export default function Home() {
 
         {/* ─── CONTACT ─── */}
         <section id="contact" className="py-16 md:py-20" aria-labelledby="contact-heading">
-          <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Begin Your Project</span>
               <h2 id="contact-heading" className="heading text-4xl md:text-5xl">Let&lsquo;s compose your landscape</h2>
@@ -584,7 +584,7 @@ export default function Home() {
 
         {/* ─── CTA BANNER ─── */}
         <section className="land-cta-banner py-16 md:py-20">
-          <div className="max-w-4xl mx-auto px-6 text-center land-reveal">
+          <div className="max-w-7xl mx-auto px-6 text-center land-reveal">
             <h2 className="heading text-3xl md:text-5xl text-white mb-4">Your landscape is waiting.</h2>
             <p className="text-white/80 mb-8 text-lg">Every great outdoor space begins with a single conversation.</p>
             <div className="flex gap-4 justify-center flex-wrap">
