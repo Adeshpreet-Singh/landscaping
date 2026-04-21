@@ -224,7 +224,7 @@ export default function Home() {
       {/* ─── NAVIGATION ─── */}
       <header>
         <nav role="navigation" aria-label="Main navigation" className="land-nav fixed top-0 left-0 right-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className=" section-container">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 bg-transparent border-none p-0">
               <div className="land-logo-mark">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -270,7 +270,7 @@ export default function Home() {
       <main id="main" role="main">
         {/* ─── HERO ─── */}
         <section className="land-hero">
-          <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+          <div className=" section-container">
             <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="land-reveal">
                 <span className="land-badge mb-5 inline-block">Portland&lsquo;s Premier Landscape Atelier — Est. 2005</span>
@@ -321,7 +321,7 @@ export default function Home() {
 
         {/* ─── SERVICES ─── */}
         <section id="services" className="land-section-alt py-16 md:py-20" aria-labelledby="services-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">What We Do</span>
               <h2 id="services-heading" className="heading text-4xl md:text-5xl">Crafted with intention</h2>
@@ -347,7 +347,7 @@ export default function Home() {
 
         {/* ─── BEFORE/AFTER PORTFOLIO ─── */}
         <section id="portfolio" className="py-16 md:py-20" aria-labelledby="portfolio-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Portfolio</span>
               <h2 id="portfolio-heading" className="heading text-4xl md:text-5xl">The transformation</h2>
@@ -390,7 +390,7 @@ export default function Home() {
 
         {/* ─── PROCESS ─── */}
         <section id="process" className="land-section-alt py-16 md:py-20" aria-labelledby="process-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Our Approach</span>
               <h2 id="process-heading" className="heading text-4xl md:text-5xl">From vision to reality</h2>
@@ -414,7 +414,7 @@ export default function Home() {
 
         {/* ─── TESTIMONIALS ─── */}
         <section id="stories" className="py-16 md:py-20" aria-labelledby="stories-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Client Stories</span>
               <h2 id="stories-heading" className="heading text-4xl md:text-5xl">Voices from our gardens</h2>
@@ -437,7 +437,7 @@ export default function Home() {
 
         {/* ─── SERVICE AREA ─── */}
         <section className="land-section-alt py-16 md:py-20" aria-labelledby="area-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="land-reveal">
                 <span className="land-badge mb-3 inline-block">Service Area</span>
@@ -471,7 +471,7 @@ export default function Home() {
 
         {/* ─── CONTACT ─── */}
         <section id="contact" className="py-16 md:py-20" aria-labelledby="contact-heading">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className=" section-container">
             <div className="text-center mb-14 land-reveal">
               <span className="land-badge mb-3 inline-block">Begin Your Project</span>
               <h2 id="contact-heading" className="heading text-4xl md:text-5xl">Let&lsquo;s compose your landscape</h2>
@@ -584,7 +584,7 @@ export default function Home() {
 
         {/* ─── CTA BANNER ─── */}
         <section className="land-cta-banner py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 text-center land-reveal">
+          <div className=" section-container">
             <h2 className="heading text-3xl md:text-5xl text-white mb-4">Your landscape is waiting.</h2>
             <p className="text-white/80 mb-8 text-lg">Every great outdoor space begins with a single conversation.</p>
             <div className="flex gap-4 justify-center flex-wrap">
@@ -597,7 +597,7 @@ export default function Home() {
 
       {/* ─── FOOTER ─── */}
       <footer className="land-footer py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className=" section-container">
           <div className="grid md:grid-cols-4 gap-8 mb-10">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
