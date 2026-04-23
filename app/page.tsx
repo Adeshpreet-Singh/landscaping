@@ -486,7 +486,7 @@ export default function Home() {
  <div className="space-y-4">
  <a href="tel:+150****1234" className="flex items-center gap-3 group">
  <span className="land-icon-circle"></span>
- <span className="group-hover:text-[var(--land-forest)] transition-colors">[PHONE]</span>
+ <span className="group-hover:text-[var(--land-forest)] transition-colors">+91 98765 43210</span>
  </a>
  <a href="mailto:[EMAIL]" className="flex items-center gap-3 group">
  <span className="land-icon-circle"></span>
@@ -544,7 +544,7 @@ export default function Home() {
  <div className="grid md:grid-cols-2 gap-4">
  <div>
  <label htmlFor="phone" className="block text-sm font-semibold mb-1.5">Phone</label>
- <input id="phone" name="phone" type="tel" placeholder="[PHONE]" className="land-input" />
+ <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" className="land-input" />
  </div>
  <div>
  <label htmlFor="service" className="block text-sm font-semibold mb-1.5">Service Needed</label>
@@ -589,7 +589,7 @@ export default function Home() {
  <p className="text-white/80 mb-8 text-lg">Every great outdoor space begins with a single conversation.</p>
  <div className="flex gap-4 justify-center flex-wrap">
  <button onClick={() => scrollToSection('contact')} className="land-btn-white">Book Consultation</button>
- <a href="tel:+150****1234" className="land-btn-outline-white">Call [PHONE]</a>
+ <a href="tel:+150****1234" className="land-btn-outline-white">Call +91 98765 43210</a>
  </div>
  </div>
  </section>
@@ -621,7 +621,7 @@ export default function Home() {
  <div>
  <h4 className="heading text-lg mb-4">Contact</h4>
  <div className="space-y-2 opacity-60">
- <a href="tel:+150****1234" className="block hover:opacity-100">[PHONE]</a>
+ <a href="tel:+150****1234" className="block hover:opacity-100">+91 98765 43210</a>
  <a href="mailto:[EMAIL]" className="block hover:opacity-100">[EMAIL]</a>
  <p>[ADDRESS]</p>
  </div>
