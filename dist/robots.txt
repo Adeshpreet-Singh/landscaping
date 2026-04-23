@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://landscaping.com.com/sitemap.xml

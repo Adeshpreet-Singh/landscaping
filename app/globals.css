@@ -1,25 +1,29 @@
+:root {
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+  --bg-canvas: #f0fdf4;
+  --bg-panel: #ffffff;
+  --bg-elevated: #f0fdf4;
+  --text-primary: #14532d;
+  --text-secondary: #5a7c5a;
+  --text-tertiary: #5a7c5a;
+  --accent-brand: #84cc16;
+  --accent-interactive: #15803d;
+  --surface-translucent: rgba(255,255,255,0.08);
+  --surface-translucent-hover: rgba(255,255,255,0.12);
+  --surface-translucent-active: rgba(255,255,255,0.16);
+  --border-default: rgba(0,0,0,0.1);
+  --border-subtle: rgba(0,0,0,0.05);
+  --border-hover: rgba(0,0,0,0.2);
+}
 /* FONTS_INJECTED */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap");
-:root {
-  --font-heading: 'Cormorant Garamond', serif;
-  --font-body: 'Inter', sans-serif;
-}
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
 body { font-family: var(--font-body); }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
-
-:root {
-  --primary: #166534;
-  --secondary: #15803d;
-  --accent: #84cc16;
-  --bg: #f0fdf4;
-  --surface: #ffffff;
-  --text: #14532d;
-  --muted: #5a7c5a;
-}
 
 /* ═══════════════════════════════════════════
    BASE

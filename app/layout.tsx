@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Terraverde | Portland's Premier Landscape Atelier",
     description:
       "Bespoke landscape design, master installation, and artisan hardscaping. Composing living environments since 2005.",
-    url: "https://terraverde.com",
+    url: "[WEBSITE]",
     siteName: "Terraverde Landscape Atelier",
     images: [
       {
@@ -60,10 +60,10 @@ export default function RootLayout({
     name: "Terraverde Landscape Atelier",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
-    "@id": "https://terraverde.com",
-    url: "https://terraverde.com",
+    "@id": "[WEBSITE]",
+    url: "[WEBSITE]",
     telephone: "+150****1234",
-    email: "hello@terraverde.com",
+    email: "[EMAIL]",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1234 Garden Way",
@@ -98,9 +98,9 @@ export default function RootLayout({
       reviewCount: "247",
     },
     sameAs: [
-      "https://www.facebook.com/terraverdelandscapes",
-      "https://www.instagram.com/terraverdelandscapes",
-      "https://www.pinterest.com/terraverdelandscapes",
+      "[FACEBOOK_URL]",
+      "[INSTAGRAM_URL]",
+      "[PINTEREST_URL]",
     ],
   };
 
