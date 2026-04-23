@@ -454,16 +454,7 @@ export default function Home() {
  </div>
  </div>
  <div className="land-img-wrap land-reveal h-[350px]">
- <iframe
- title="Terraverde Landscape Atelier service area map"
- src="[WEBSITE]/maps/embed?pb=!1m18!1m12!1m3!1d178849.8034099548!2d-122.75748!3d45.5152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f9d26c6d!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1"
- width="100%"
- height="350"
- allowFullScreen
- loading="lazy"
- referrerPolicy="no-referrer-when-downgrade"
- className="rounded-2xl"
- />
+ <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 text-sm">Map View</div>
  </div>
  </div>
  </div>
