@@ -1,44 +1,24 @@
+/* FONTS_INJECTED */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap");
+:root {
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+body { font-family: var(--font-body); }
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
 :root {
-  /* ─── Core Palette ─── */
-  --land-cream: #f7f3eb;
-  --land-cream-warm: #f0e8d8;
-  --land-cream-earth: #e8dcc8;
-  --land-forest: #2d5a27;
-  --land-forest-deep: #1e3f1a;
-  --land-forest-dark: #132a11;
-  --land-sage: #7a9e6e;
-  --land-sage-light: #a3c496;
-  --land-fern: #4a7a3e;
-  --land-moss: #3d6b35;
-
-  /* ─── Earth Tones ─── */
-  --land-bark: #5c4a2a;
-  --land-bark-light: #8b7452;
-  --land-terra: #b8734a;
-  --land-terra-warm: #c4845a;
-  --land-stone: #9e9484;
-  --land-clay: #b8a48c;
-
-  /* ─── Neutrals ─── */
-  --land-text: #1a1608;
-  --land-text-muted: #4a4232;
-  --land-border: #d4c8a8;
-  --land-border-light: #e6dece;
-
-  /* ─── Radii ─── */
-  --land-radius: 12px;
-  --land-radius-lg: 20px;
-  --land-radius-xl: 28px;
-
-  /* ─── Shadows ─── */
-  --land-shadow: 0 4px 16px rgba(42, 36, 20, 0.06);
-  --land-shadow-md: 0 8px 30px rgba(42, 36, 20, 0.08);
-  --land-shadow-lg: 0 16px 50px rgba(42, 36, 20, 0.12);
-  --land-shadow-xl: 0 24px 60px rgba(42, 36, 20, 0.16);
+  --primary: #166534;
+  --secondary: #15803d;
+  --accent: #84cc16;
+  --bg: #f0fdf4;
+  --surface: #ffffff;
+  --text: #14532d;
+  --muted: #5a7c5a;
 }
 
 /* ═══════════════════════════════════════════
@@ -1015,3 +995,14 @@ section, .section { margin-bottom: 0; }
 .vt-md { margin-top: 2.5rem; margin-bottom: 2.5rem; }
 .vt-lg { margin-top: 4rem; margin-bottom: 4rem; }
 .vt-xl { margin-top: 5rem; margin-bottom: 5rem; }
+
+/* DESIGN_SYSTEM_INJECTED */
+body {
+  background-color: #f0fdf4;
+  color: #14532d;
+}
+.bg-primary { background-color: #166534 !important; }
+.bg-secondary { background-color: #15803d !important; }
+.text-primary { color: #166534 !important; }
+.text-accent { color: #84cc16 !important; }
+.bg-accent { background-color: #84cc16 !important; }
