@@ -8,14 +8,14 @@ const SERVICES = [
     title: 'Bespoke Design',
     stat: '600+',
     desc: 'Award-winning landscape architecture. CAD renderings, plant palettes, and hardscape plans crafted around your lifestyle.',
-    icon: '📐',
+    icon: '',
     img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
   },
   {
     title: 'Master Installation',
     stat: '1,400+',
     desc: 'From mature specimen trees to hand-set natural stone. Every installation executed with surgical precision.',
-    icon: '🌳',
+    icon: '',
     img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
   },
   {
@@ -29,7 +29,7 @@ const SERVICES = [
     title: 'Artisan Hardscaping',
     stat: 'Lifetime',
     desc: 'Bluestone patios, dry-stacked walls, water features. Crafted by master masons using materials that age beautifully.',
-    icon: '🪨',
+    icon: '',
     img: 'https://images.unsplash.com/photo-1598902108854-d1446677dc01?w=600&q=80',
   },
   {
@@ -97,10 +97,10 @@ const TESTIMONIALS = [
 ];
 
 const PROCESS_STEPS = [
-  { num: '01', title: 'Discovery', desc: 'An unhurried walk through your property. We listen, observe sun paths, test soil, and understand how you dream of living outdoors.', icon: '🔍' },
+  { num: '01', title: 'Discovery', desc: 'An unhurried walk through your property. We listen, observe sun paths, test soil, and understand how you dream of living outdoors.', icon: '' },
   { num: '02', title: 'Design', desc: 'Hand-rendered concept boards and 3D fly-throughs. Material samples on-site so you can touch every stone and smell every plant.', icon: '✏️' },
-  { num: '03', title: 'Craft', desc: 'Our master crews bring the design to life. Clean sites, respectful timelines, and a level of care that borders on obsessive.', icon: '🏗️' },
-  { num: '04', title: 'Nurture', desc: 'Seasonal tune-ups, proactive care, and a dedicated account manager. Your landscape gets better every year, not just the first.', icon: '🌿' },
+  { num: '03', title: 'Craft', desc: 'Our master crews bring the design to life. Clean sites, respectful timelines, and a level of care that borders on obsessive.', icon: '️' },
+  { num: '04', title: 'Nurture', desc: 'Seasonal tune-ups, proactive care, and a dedicated account manager. Your landscape gets better every year, not just the first.', icon: '' },
 ];
 
 const STATS = [
@@ -485,7 +485,7 @@ export default function Home() {
                   <h3 className="heading text-xl mb-4">Get in touch</h3>
                   <div className="space-y-4">
                     <a href="tel:+150****1234" className="flex items-center gap-3 group">
-                      <span className="land-icon-circle">📞</span>
+                      <span className="land-icon-circle"></span>
                       <span className="group-hover:text-[var(--land-forest)] transition-colors">(503) 555-1234</span>
                     </a>
                     <a href="mailto:hello@terraverde.com" className="flex items-center gap-3 group">
@@ -493,7 +493,7 @@ export default function Home() {
                       <span className="group-hover:text-[var(--land-forest)] transition-colors">hello@terraverde.com</span>
                     </a>
                     <div className="flex items-center gap-3">
-                      <span className="land-icon-circle">📍</span>
+                      <span className="land-icon-circle"></span>
                       <span>1234 Garden Way<br />Portland, OR 97201</span>
                     </div>
                   </div>
@@ -509,9 +509,9 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-3">
-                  <a href="https://www.instagram.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="land-icon-circle">📷</a>
-                  <a href="https://www.pinterest.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="land-icon-circle">📌</a>
-                  <a href="https://www.facebook.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="land-icon-circle">📘</a>
+                  <a href="https://www.instagram.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="land-icon-circle"></a>
+                  <a href="https://www.pinterest.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="land-icon-circle"></a>
+                  <a href="https://www.facebook.com/terraverdelandscapes" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="land-icon-circle"></a>
                 </div>
               </div>
 
@@ -520,7 +520,7 @@ export default function Home() {
                 <div className="land-card">
                   {formStatus === 'sent' ? (
                     <div className="text-center py-10">
-                      <div className="text-5xl mb-4">🌱</div>
+                      <div className="text-5xl mb-4"></div>
                       <h3 className="heading text-2xl mb-2">Request Received!</h3>
                       <p className="opacity-70">We&lsquo;ll reach out within 24 hours to schedule your complimentary site visit.</p>
                     </div>
