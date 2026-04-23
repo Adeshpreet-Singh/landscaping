@@ -15,6 +15,26 @@
   --border-default: rgba(0,0,0,0.1);
   --border-subtle: rgba(0,0,0,0.05);
   --border-hover: rgba(0,0,0,0.2);
+  --land-border: #e5e5e5;
+  --land-border-light: #e5e5e5;
+  --land-cream: initial;
+  --land-cream-earth: initial;
+  --land-cream-warm: initial;
+  --land-forest: #2d5a27;
+  --land-forest-dark: #1a3517;
+  --land-forest-deep: #0f200d;
+  --land-moss: #6b8a5e;
+  --land-radius: initial;
+  --land-radius-lg: initial;
+  --land-radius-xl: initial;
+  --land-sage: #87a878;
+  --land-sage-light: #a8c49a;
+  --land-shadow: initial;
+  --land-shadow-lg: initial;
+  --land-shadow-md: initial;
+  --land-shadow-xl: initial;
+  --land-text: #333333;
+  --land-text-muted: #333333;
 }
 /* FONTS_INJECTED */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap");
