@@ -184,7 +184,7 @@ function BeforeAfterSlider({ before, after, label, location, scope }: { before: 
 /* Star Rating */
 function Stars({ count }: { count: number }) {
  return (
- <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+ <div className="flex gap-1.5" aria-label={`${count} out of 5 stars`}>
  {Array.from({ length: 5 }).map((_, i) => (
  <span key={i} className={i < count ? 'text-amber-400' : 'text-gray-300'}></span>
  ))}
