@@ -273,19 +273,19 @@ export default function Home() {
  <div className=" section-container">
  <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
  <div className="land-reveal">
- <span className="land-badge mb-5 inline-block">Portland&lsquo;s Premier Landscape Atelier — Est. 2005</span>
+ <span className="land-badge mb-5 inline-block">Portland's Premier Landscape Atelier — Est. 2005</span>
  <h2 className="heading land-hero-heading">
  Where nature<br />meets <span className="land-accent">intention.</span>
  </h2>
  <p className="text-lg md:text-xl opacity-80 mb-8 max-w-lg leading-relaxed">
- We don&lsquo;t just plant gardens — we compose living environments. Every stone placed, every canopy shaped, every light angled to elevate how you experience home.
+ We don't just plant gardens — we compose living environments. Every stone placed, every canopy shaped, every light angled to elevate how you experience home.
  </p>
  <div className="flex flex-wrap gap-4 mb-10">
  <button onClick={() => scrollToSection('contact')} className="land-btn">Book a Free Consultation</button>
  <button onClick={() => scrollToSection('portfolio')} className="land-btn-outline">View Our Work</button>
  </div>
  <div className="flex items-center gap-8 flex-wrap text-sm font-medium opacity-70">
- <span className="flex items-center gap-2"><span aria-hidden="true" className="text-[var(--land-forest)]"></span> Licensed &amp; Insured</span>
+ <span className="flex items-center gap-2"><span aria-hidden="true" className="text-[var(--land-forest)]"></span> Licensed & Insured</span>
  <span className="flex items-center gap-2"><span aria-hidden="true" className="text-[var(--land-forest)]"></span> 5-Year Craftsmanship Warranty</span>
  <span className="flex items-center gap-2"><span aria-hidden="true" className="text-[var(--land-forest)]"></span> Sustainably Sourced Materials</span>
  </div>
@@ -423,7 +423,7 @@ export default function Home() {
  {TESTIMONIALS.map((t, i) => (
  <div key={i} className="land-testimonial-card land-reveal">
  <Stars count={t.stars} />
- <p className="mt-4 mb-6 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
+ <p className="mt-4 mb-6 leading-relaxed">"{t.text}"</p>
  <div className="mt-auto">
  <div className="land-testimonial-metric">{t.metric}</div>
  <div className="mt-3 font-semibold">{t.name}</div>
@@ -465,7 +465,7 @@ export default function Home() {
  <div className=" section-container">
  <div className="text-center mb-14 land-reveal">
  <span className="land-badge mb-3 inline-block">Begin Your Project</span>
- <h2 id="contact-heading" className="heading text-4xl md:text-5xl">Let&lsquo;s compose your landscape</h2>
+ <h2 id="contact-heading" className="heading text-4xl md:text-5xl">Let's compose your landscape</h2>
  <p className="mt-4 opacity-70">A complimentary site visit and design consultation. No obligation — just possibilities.</p>
  </div>
 
@@ -477,15 +477,15 @@ export default function Home() {
  <div className="space-y-4">
  <a href="tel:+150****1234" className="flex items-center gap-3 group">
  <span className="land-icon-circle"></span>
- <span className="group-hover:text-[var(--land-forest)] transition-colors">+91 98765 43210</span>
+ <span className="group-hover:text-[var(--land-forest)] transition-colors">+1-800-555-0230</span>
  </a>
- <a href="mailto:[EMAIL]" className="flex items-center gap-3 group">
+ <a href="mailto:info@landscaping.com" className="flex items-center gap-3 group">
  <span className="land-icon-circle"></span>
- <span className="group-hover:text-[var(--land-forest)] transition-colors">[EMAIL]</span>
+ <span className="group-hover:text-[var(--land-forest)] transition-colors">info@landscaping.com</span>
  </a>
  <div className="flex items-center gap-3">
  <span className="land-icon-circle"></span>
- <span>[ADDRESS]</span>
+ <span>350 Fifth Avenue, New York, NY 10118</span>
  </div>
  </div>
  </div>
@@ -513,11 +513,11 @@ export default function Home() {
  <div className="text-center py-10">
  <div className="text-5xl mb-4"></div>
  <h3 className="heading text-2xl mb-2">Request Received!</h3>
- <p className="opacity-70">We&lsquo;ll reach out within 24 hours to schedule your complimentary site visit.</p>
+ <p className="opacity-70">We'll reach out within 24 hours to schedule your complimentary site visit.</p>
  </div>
  ) : (
  <form onSubmit={handleFormSubmit} className="space-y-5">
- <input type="hidden" name="access_key" value="[WEB3FORMS_KEY]" />
+ <input type="hidden" name="access_key" value="00000000-0000-0000-0000-000000000000" />
  <input type="hidden" name="subject" value="New Consultation Request — Terraverde Landscape Atelier" />
  <input type="checkbox" name="botcheck" className="hidden" />
 
@@ -535,7 +535,7 @@ export default function Home() {
  <div className="grid md:grid-cols-2 gap-4">
  <div>
  <label htmlFor="phone" className="block text-sm font-semibold mb-1.5">Phone</label>
- <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" className="land-input" />
+ <input id="phone" name="phone" type="tel" placeholder="+1-800-555-0230" className="land-input" />
  </div>
  <div>
  <label htmlFor="service" className="block text-sm font-semibold mb-1.5">Service Needed</label>
@@ -580,7 +580,7 @@ export default function Home() {
  <p className="text-white/80 mb-8 text-lg">Every great outdoor space begins with a single conversation.</p>
  <div className="flex gap-4 justify-center flex-wrap">
  <button onClick={() => scrollToSection('contact')} className="land-btn-white">Book Consultation</button>
- <a href="tel:+150****1234" className="land-btn-outline-white">Call +91 98765 43210</a>
+ <a href="tel:+150****1234" className="land-btn-outline-white">Call +1-800-555-0230</a>
  </div>
  </div>
  </section>
@@ -612,19 +612,19 @@ export default function Home() {
  <div>
  <h4 className="heading text-lg mb-4">Contact</h4>
  <div className="space-y-2 opacity-60">
- <a href="tel:+150****1234" className="block hover:opacity-100">+91 98765 43210</a>
- <a href="mailto:[EMAIL]" className="block hover:opacity-100">[EMAIL]</a>
- <p>[ADDRESS]</p>
+ <a href="tel:+150****1234" className="block hover:opacity-100">+1-800-555-0230</a>
+ <a href="mailto:info@landscaping.com" className="block hover:opacity-100">info@landscaping.com</a>
+ <p>350 Fifth Avenue, New York, NY 10118</p>
  </div>
  </div>
  </div>
  <div className="border-t border-[var(--land-border)] pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
  <div className="flex gap-6 flex-wrap text-sm opacity-50">
- <span>Licensed &amp; Insured</span>
+ <span>Licensed & Insured</span>
  <span>5-Year Warranty</span>
  <span>Sustainable Practices</span>
  </div>
- <div className="text-sm opacity-50">&copy; 2026 Terraverde Landscape Atelier. All rights reserved.</div>
+ <div className="text-sm opacity-50">© 2026 Terraverde Landscape Atelier. All rights reserved.</div>
  </div>
  </div>
  

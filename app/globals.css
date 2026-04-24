@@ -1020,13 +1020,4 @@ section, .section { margin-bottom: 0; }
 .vt-lg { margin-top: 4rem; margin-bottom: 4rem; }
 .vt-xl { margin-top: 5rem; margin-bottom: 5rem; }
 
-/* DESIGN_SYSTEM_INJECTED */
-body {
-  background-color: #f0fdf4;
-  color: #14532d;
-}
-.bg-primary { background-color: #166534 !important; }
-.bg-secondary { background-color: #15803d !important; }
-.text-primary { color: #166534 !important; }
-.text-accent { color: #84cc16 !important; }
-.bg-accent { background-color: #84cc16 !important; }
+
